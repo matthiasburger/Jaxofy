@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using IronSphere.Extensions;
 using Jaxofy.Data;
+using Jaxofy.Data.Models;
 using Jaxofy.Models.Settings;
 using Jaxofy.Services.AuthTokenService;
 using Jaxofy.Services.PasswordHashing;
@@ -25,7 +26,8 @@ namespace Jaxofy.Services.Login
         private readonly IAuthTokenService _authTokenService;
         private readonly IOptionsMonitor<JwtSettings> _jwtSettings;
 
-        public LoginService(ApplicationDbContext db, IOptionsMonitor<JwtSettings> jwtSettings, IPasswordHashing pwHashing, IAuthTokenService authTokenService)
+        public LoginService(ApplicationDbContext db, IOptionsMonitor<JwtSettings> jwtSettings,
+            IPasswordHashing pwHashing, IAuthTokenService authTokenService)
         {
             _db = db;
             _pwHashing = pwHashing;
@@ -35,24 +37,36 @@ namespace Jaxofy.Services.Login
 
         public async Task<string> Login(string email, string password)
         {
-            (long userId, string storedPassword) = await _db.ApplicationUsers
+            ApplicationUser applicationUser = await _db.ApplicationUsers
                 .Where(user => user.Email == email && user.IsActive)
-                .Select(user => new ValueTuple<long, string>(user.Id, user.Password))
                 .FirstOrDefaultAsync();
 
-            if (storedPassword.IsNullOrEmpty())
+            if (applicationUser is null || applicationUser.SuspendedUntil >= DateTime.Now)
+                return null;
+
+            if (!await _pwHashing.Verify(password, applicationUser.Password))
             {
+                if (applicationUser.FailedLoginCount < 4)
+                    applicationUser.FailedLoginCount++;
+                else
+                    applicationUser.SuspendedUntil = DateTime.Now.AddMinutes(30);
+
+                _db.ApplicationUsers.Update(applicationUser);
+
                 return null;
             }
 
-            if (!await _pwHashing.Verify(password, storedPassword))
-            {
-                // TODO: handle login failures. E.g. log them, increase failed attempts count, etc...
+            string token;
+            if ((token = await _authTokenService.EmitAuthTokenForUser(applicationUser.Id)).IsNullOrWhiteSpace())
+                return null;
+            
+            applicationUser.FailedLoginCount = 0;
+            applicationUser.SuspendedUntil = null;
+            applicationUser.LastLogin = DateTime.Now;
+
+            _db.ApplicationUsers.Update(applicationUser);
                 
-                return null;
-            }
-
-            return await _authTokenService.EmitAuthTokenForUser(userId);
+            return token;
         }
 
         public Task<string> RefreshToken(string token)

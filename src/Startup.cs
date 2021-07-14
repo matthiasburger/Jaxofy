@@ -14,6 +14,7 @@ using Jaxofy.Services.AuthTokenService;
 using Jaxofy.Services.Environment;
 using Jaxofy.Services.Login;
 using Jaxofy.Services.PasswordHashing;
+using Jaxofy.Services.TrackService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -118,6 +119,8 @@ namespace Jaxofy
             services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
             services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
             services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddScoped<ITrackService, TrackService>();
+            services.AddScoped<IHttpEncoder, HttpEncoder>();
 
             services.Configure<JwtSettings>(_configuration.GetSection(JwtSettings.SectionName));
             services.Configure<Argon2HashingParameters>(_configuration.GetSection(Argon2HashingParameters.SectionName));

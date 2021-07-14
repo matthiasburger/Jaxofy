@@ -76,5 +76,9 @@ namespace Jaxofy.Data.Models
         /// </summary>
         [Column("NewPasswordRequiredOn", Order = 9, TypeName = DatabaseType.Date)]
         public DateTime? NewPasswordRequiredOn { get; set; }
+
+        public int FailedLoginCount { get; set; }
+        public DateTime? SuspendedUntil { get; set; }
+        public DateTime? LastLogin { get; set; }
     }
 }

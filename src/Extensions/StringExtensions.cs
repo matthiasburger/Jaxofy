@@ -50,5 +50,16 @@ namespace Jaxofy.Extensions
                 _ => $"{char.ToUpper(@this[0])}{@this[1..]}"
             };
         }
+        
+        public static string ToContentDispositionFriendly(this string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                return null;
+            }
+
+            return input.Replace(',', ' ');
+        }
+
     }
 }
