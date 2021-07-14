@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/.idea.DasTeamRevolution.iml
+/projectSettingsUpdater.xml
+# Datasource local storage ignored files
+/../../../../../../../:\git\Revolution\src\.idea\.idea.DasTeamRevolution.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

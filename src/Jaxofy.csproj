@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+        <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+        <IsPackable>false</IsPackable>
+        <SpaRoot>..\..\Revolution.Frontend\</SpaRoot>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+        <!-- Set this to true if you enable server-side prerendering -->
+        <BuildServerSideRenderer>false</BuildServerSideRenderer>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCoreRateLimit" Version="3.2.2" />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" Version="4.1.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="GlitchedPolygons.ExtensionMethods" Version="1.0.8" />
+        <PackageReference Include="IronSphere.Extensions" Version="20.8.0" />
+        <PackageReference Include="Konscious.Security.Cryptography.Argon2" Version="1.2.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.0-rc" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
+        <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Don't publish the SPA source files, but do show them in the project files list -->
+        <Content Remove="$(SpaRoot)**" />
+        <None Remove="$(SpaRoot)**" />
+        <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+        <None Update="Data\DemoSql\demodata.sql">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Logs" />
+    </ItemGroup>
+</Project>

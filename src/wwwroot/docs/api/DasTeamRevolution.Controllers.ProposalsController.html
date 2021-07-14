@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ProposalsController
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProposalsController
+   ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DasTeamRevolution.Controllers.ProposalsController">
+  
+  
+  <h1 id="DasTeamRevolution_Controllers_ProposalsController" data-uid="DasTeamRevolution.Controllers.ProposalsController" class="text-break">Class ProposalsController
+  </h1>
+  <div class="markdown level0 summary"><p><a class="xref" href="DasTeamRevolution.Data.Models.Proposal.html">Proposal</a> controller for posting employee proposals and uploading additional attachments to them.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html">ApiBaseController</a></div>
+    <div class="level2"><span class="xref">ProposalsController</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_EnvelopeResult">ApiBaseController.EnvelopeResult</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Forbidden">ApiBaseController.Forbidden()</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_InternalServerError">ApiBaseController.InternalServerError()</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Error_System_Int32_DasTeamRevolution_Models_Error_">ApiBaseController.Error(Int32, Error)</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Error_HttpStatusCode_DasTeamRevolution_Models_Error_">ApiBaseController.Error(HttpStatusCode, Error)</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Ok__1_System_Int64_IEnumerable___0__">ApiBaseController.Ok&lt;T&gt;(Int64, IEnumerable&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Created__1_System_String_System_Int64_IEnumerable___0__">ApiBaseController.Created&lt;T&gt;(String, Int64, IEnumerable&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="DasTeamRevolution.Controllers.Base.ApiBaseController.html#DasTeamRevolution_Controllers_Base_ApiBaseController_Updated__1_System_Int64___0_">ApiBaseController.Updated&lt;T&gt;(Int64, T)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DasTeamRevolution.Controllers.html">DasTeamRevolution.Controllers</a></h6>
+  <h6><strong>Assembly</strong>: DasTeamRevolution.dll</h6>
+  <h5 id="DasTeamRevolution_Controllers_ProposalsController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ProposalsController : ApiBaseController</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController__ctor_" data-uid="DasTeamRevolution.Controllers.ProposalsController.#ctor*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController__ctor_DasTeamRevolution_Data_ApplicationDbContext_DasTeamRevolution_Services_AuthTokenService_IAuthTokenService_IMapper_" data-uid="DasTeamRevolution.Controllers.ProposalsController.#ctor(DasTeamRevolution.Data.ApplicationDbContext,DasTeamRevolution.Services.AuthTokenService.IAuthTokenService,IMapper)">ProposalsController(ApplicationDbContext, IAuthTokenService, IMapper)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProposalsController(ApplicationDbContext db, IAuthTokenService authTokenService, IMapper mapper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Data.ApplicationDbContext.html">ApplicationDbContext</a></td>
+        <td><span class="parametername">db</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Services.AuthTokenService.IAuthTokenService.html">IAuthTokenService</a></td>
+        <td><span class="parametername">authTokenService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IMapper</span></td>
+        <td><span class="parametername">mapper</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_AcceptProposal_" data-uid="DasTeamRevolution.Controllers.ProposalsController.AcceptProposal*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_AcceptProposal_DasTeamRevolution_Models_Dto_Proposal_ProposalAcceptanceRequestDto_" data-uid="DasTeamRevolution.Controllers.ProposalsController.AcceptProposal(DasTeamRevolution.Models.Dto.Proposal.ProposalAcceptanceRequestDto)">AcceptProposal(ProposalAcceptanceRequestDto)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; AcceptProposal(ProposalAcceptanceRequestDto dto)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Models.Dto.Proposal.ProposalAcceptanceRequestDto.html">ProposalAcceptanceRequestDto</a></td>
+        <td><span class="parametername">dto</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfClient_" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfClient*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfClient" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfClient">GetProposalsOfClient()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; GetProposalsOfClient()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfSupplier_" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfSupplier*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfSupplier_System_Nullable_System_Int64__System_Nullable_System_Int64__" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfSupplier(System.Nullable{System.Int64},System.Nullable{System.Int64})">GetProposalsOfSupplier(Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; GetProposalsOfSupplier(long? clientId = null, long? vacancyId = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">clientId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">vacancyId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfVacancy_" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfVacancy*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_GetProposalsOfVacancy_System_Int64_" data-uid="DasTeamRevolution.Controllers.ProposalsController.GetProposalsOfVacancy(System.Int64)">GetProposalsOfVacancy(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; GetProposalsOfVacancy(long id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_PostProposal_" data-uid="DasTeamRevolution.Controllers.ProposalsController.PostProposal*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_PostProposal_DasTeamRevolution_Models_Dto_Proposal_ProposalCreationRequestDto_" data-uid="DasTeamRevolution.Controllers.ProposalsController.PostProposal(DasTeamRevolution.Models.Dto.Proposal.ProposalCreationRequestDto)">PostProposal(ProposalCreationRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Propose an employee.<p> </p>
+IMPORTANT:
+This query will fail if the provided vacancy and/or employee
+is not part of what the requesting user has access permission to access!
+(e.g. clients may not modify suppliers' data sets!).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; PostProposal(ProposalCreationRequestDto dto)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Models.Dto.Proposal.ProposalCreationRequestDto.html">ProposalCreationRequestDto</a></td>
+        <td><span class="parametername">dto</span></td>
+        <td><p>Request body DTO.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Controllers_ProposalsController_RejectProposal_" data-uid="DasTeamRevolution.Controllers.ProposalsController.RejectProposal*"></a>
+  <h4 id="DasTeamRevolution_Controllers_ProposalsController_RejectProposal_DasTeamRevolution_Models_Dto_Proposal_ProposalRejectionRequestDto_" data-uid="DasTeamRevolution.Controllers.ProposalsController.RejectProposal(DasTeamRevolution.Models.Dto.Proposal.ProposalRejectionRequestDto)">RejectProposal(ProposalRejectionRequestDto)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IActionResult&gt; RejectProposal(ProposalRejectionRequestDto dto)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Models.Dto.Proposal.ProposalRejectionRequestDto.html">ProposalRejectionRequestDto</a></td>
+        <td><span class="parametername">dto</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

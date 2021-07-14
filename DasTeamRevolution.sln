@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasTeamRevolution", "src\DasTeamRevolution.csproj", "{09C74F6C-F7B6-439A-B074-3953775CB788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasTeamRevolution.Tests", "tests\DasTeamRevolution.Tests.csproj", "{0049F16B-8000-4BE5-9B25-FD38C581FB7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09C74F6C-F7B6-439A-B074-3953775CB788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C74F6C-F7B6-439A-B074-3953775CB788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C74F6C-F7B6-439A-B074-3953775CB788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C74F6C-F7B6-439A-B074-3953775CB788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

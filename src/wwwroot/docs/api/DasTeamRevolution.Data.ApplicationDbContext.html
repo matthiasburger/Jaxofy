@@ -1,0 +1,950 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ApplicationDbContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ApplicationDbContext
+   ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DasTeamRevolution.Data.ApplicationDbContext">
+  
+  
+  <h1 id="DasTeamRevolution_Data_ApplicationDbContext" data-uid="DasTeamRevolution.Data.ApplicationDbContext" class="text-break">Class ApplicationDbContext
+  </h1>
+  <div class="markdown level0 summary"><p>EF Core database context for interacting with the domain model.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ApplicationDbContext</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DasTeamRevolution.Data.html">DasTeamRevolution.Data</a></h6>
+  <h6><strong>Assembly</strong>: DasTeamRevolution.dll</h6>
+  <h5 id="DasTeamRevolution_Data_ApplicationDbContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ApplicationDbContext : DbContext</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext__ctor_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.#ctor*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext__ctor_DbContextOptions_DasTeamRevolution_Data_ApplicationDbContext__ILoggerFactory_DasTeamRevolution_Services_Environment_IEnvironmentDiscovery_DasTeamRevolution_Services_PasswordHashing_IPasswordHashing_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.#ctor(DbContextOptions{DasTeamRevolution.Data.ApplicationDbContext},ILoggerFactory,DasTeamRevolution.Services.Environment.IEnvironmentDiscovery,DasTeamRevolution.Services.PasswordHashing.IPasswordHashing)">ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt;, ILoggerFactory, IEnvironmentDiscovery, IPasswordHashing)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options, ILoggerFactory loggerFactory, IEnvironmentDiscovery environmentDiscovery, IPasswordHashing passwordHashing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbContextOptions</span>&lt;<a class="xref" href="DasTeamRevolution.Data.ApplicationDbContext.html">ApplicationDbContext</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">ILoggerFactory</span></td>
+        <td><span class="parametername">loggerFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Services.Environment.IEnvironmentDiscovery.html">IEnvironmentDiscovery</a></td>
+        <td><span class="parametername">environmentDiscovery</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DasTeamRevolution.Services.PasswordHashing.IPasswordHashing.html">IPasswordHashing</a></td>
+        <td><span class="parametername">passwordHashing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ApplicationUsers_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ApplicationUsers*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ApplicationUsers" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ApplicationUsers">ApplicationUsers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ApplicationUser&gt; ApplicationUsers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ApplicationUser.html">ApplicationUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Assignments_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Assignments*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Assignments" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Assignments">Assignments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Assignment&gt; Assignments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Assignment.html">Assignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientGroups_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientGroups*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientGroups" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientGroups">ClientGroups</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientGroup&gt; ClientGroups { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientGroup.html">ClientGroup</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientHeaderAdmins_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientHeaderAdmins*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientHeaderAdmins" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientHeaderAdmins">ClientHeaderAdmins</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientHeaderAdmin&gt; ClientHeaderAdmins { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientHeaderAdmin.html">ClientHeaderAdmin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientHeaders_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientHeaders*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientHeaders" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientHeaders">ClientHeaders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientHeader&gt; ClientHeaders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientHeader.html">ClientHeader</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientProfiles_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientProfiles*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientProfiles" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientProfiles">ClientProfiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientEmployeeProfile&gt; ClientProfiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientEmployeeProfile.html">ClientEmployeeProfile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Clients_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Clients*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Clients" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Clients">Clients</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Client&gt; Clients { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Client.html">Client</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientSuppliers_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientSuppliers*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientSuppliers" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientSuppliers">ClientSuppliers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientSupplier&gt; ClientSuppliers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientSupplier.html">ClientSupplier</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientUserPermissions_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientUserPermissions*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientUserPermissions" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientUserPermissions">ClientUserPermissions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientUserSetting&gt; ClientUserPermissions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientUserSetting.html">ClientUserSetting</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ClientUsers_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientUsers*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ClientUsers" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ClientUsers">ClientUsers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ClientUser&gt; ClientUsers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ClientUser.html">ClientUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_EmployeeProfiles_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.EmployeeProfiles*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_EmployeeProfiles" data-uid="DasTeamRevolution.Data.ApplicationDbContext.EmployeeProfiles">EmployeeProfiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;EmployeeProfile&gt; EmployeeProfiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.EmployeeProfile.html">EmployeeProfile</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Employees_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Employees*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Employees" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Employees">Employees</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Employee&gt; Employees { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Employee.html">Employee</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Orders_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Orders*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Orders" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Orders">Orders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Order&gt; Orders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Order.html">Order</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_PoolEmployeeDocuments_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PoolEmployeeDocuments*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_PoolEmployeeDocuments" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PoolEmployeeDocuments">PoolEmployeeDocuments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;PoolEmployeeDocument&gt; PoolEmployeeDocuments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.PoolEmployeeDocument.html">PoolEmployeeDocument</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_PoolEmployees_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PoolEmployees*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_PoolEmployees" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PoolEmployees">PoolEmployees</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;PoolEmployee&gt; PoolEmployees { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.PoolEmployee.html">PoolEmployee</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_PostalAddresses_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PostalAddresses*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_PostalAddresses" data-uid="DasTeamRevolution.Data.ApplicationDbContext.PostalAddresses">PostalAddresses</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;PostalAddress&gt; PostalAddresses { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.PostalAddress.html">PostalAddress</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ProposalDocuments_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ProposalDocuments*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ProposalDocuments" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ProposalDocuments">ProposalDocuments</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ProposalDocument&gt; ProposalDocuments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ProposalDocument.html">ProposalDocument</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Proposals_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Proposals*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Proposals" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Proposals">Proposals</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Proposal&gt; Proposals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Proposal.html">Proposal</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_ProposalStates_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ProposalStates*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_ProposalStates" data-uid="DasTeamRevolution.Data.ApplicationDbContext.ProposalStates">ProposalStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;ProposalStateHistory&gt; ProposalStates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.ProposalStateHistory.html">ProposalStateHistory</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Ratings_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Ratings*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Ratings" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Ratings">Ratings</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Rating&gt; Ratings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Rating.html">Rating</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_RecordCreations_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.RecordCreations*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_RecordCreations" data-uid="DasTeamRevolution.Data.ApplicationDbContext.RecordCreations">RecordCreations</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;RecordCreation&gt; RecordCreations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.RecordCreation.html">RecordCreation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_RecordModifications_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.RecordModifications*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_RecordModifications" data-uid="DasTeamRevolution.Data.ApplicationDbContext.RecordModifications">RecordModifications</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;RecordModification&gt; RecordModifications { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.RecordModification.html">RecordModification</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_SupplierHeaders_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierHeaders*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_SupplierHeaders" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierHeaders">SupplierHeaders</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;SupplierHeader&gt; SupplierHeaders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.SupplierHeader.html">SupplierHeader</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Suppliers_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Suppliers*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Suppliers" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Suppliers">Suppliers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Supplier&gt; Suppliers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Supplier.html">Supplier</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_SupplierUserPermissions_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierUserPermissions*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_SupplierUserPermissions" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierUserPermissions">SupplierUserPermissions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;SupplierUserSetting&gt; SupplierUserPermissions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.SupplierUserSetting.html">SupplierUserSetting</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_SupplierUsers_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierUsers*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_SupplierUsers" data-uid="DasTeamRevolution.Data.ApplicationDbContext.SupplierUsers">SupplierUsers</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;SupplierUser&gt; SupplierUsers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.SupplierUser.html">SupplierUser</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_TimeRecords_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.TimeRecords*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_TimeRecords" data-uid="DasTeamRevolution.Data.ApplicationDbContext.TimeRecords">TimeRecords</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;TimeRecord&gt; TimeRecords { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.TimeRecord.html">TimeRecord</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_TimeRecordStates_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.TimeRecordStates*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_TimeRecordStates" data-uid="DasTeamRevolution.Data.ApplicationDbContext.TimeRecordStates">TimeRecordStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;TimeRecordStateHistory&gt; TimeRecordStates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.TimeRecordStateHistory.html">TimeRecordStateHistory</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_Vacancies_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Vacancies*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_Vacancies" data-uid="DasTeamRevolution.Data.ApplicationDbContext.Vacancies">Vacancies</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;Vacancy&gt; Vacancies { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.Vacancy.html">Vacancy</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_VacancyStates_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.VacancyStates*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_VacancyStates" data-uid="DasTeamRevolution.Data.ApplicationDbContext.VacancyStates">VacancyStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DbSet&lt;VacancyStateHistory&gt; VacancyStates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbSet</span>&lt;<a class="xref" href="DasTeamRevolution.Data.Models.VacancyStateHistory.html">VacancyStateHistory</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="DasTeamRevolution_Data_ApplicationDbContext_OnConfiguring_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.OnConfiguring*"></a>
+  <h4 id="DasTeamRevolution_Data_ApplicationDbContext_OnConfiguring_DbContextOptionsBuilder_" data-uid="DasTeamRevolution.Data.ApplicationDbContext.OnConfiguring(DbContextOptionsBuilder)">OnConfiguring(DbContextOptionsBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">DbContextOptionsBuilder</span></td>
+        <td><span class="parametername">optionsBuilder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

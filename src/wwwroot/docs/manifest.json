@@ -1,0 +1,3023 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/git/dasteam/revolution/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Constants.Errors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Constants.Errors.html",
+          "hash": "LHTjRp+PqwdS2L4Pdzc6EgtYbrpXRw7mgdROBfgu6M4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Constants.html",
+          "hash": "uD1ooE0U2bXqLPYjjT/rVKoJa+nsynTQ9adpKl/CxFw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ApplicationUsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ApplicationUsersController.html",
+          "hash": "fiAGIDU8aC7dZSgl/D1vllPMjvdYQdttLquyhq4Pc7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.AuthController.html",
+          "hash": "as0+HdhVA+5alnJAF9WLTKWRl2mHB5vHT2nyYU8+nfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.Base.ApiBaseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.Base.ApiBaseController.html",
+          "hash": "rnritFG1vzhJ2o9pmuoetqnSRlCCvoiR7STq8WqKeJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.Base.EnvelopeResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.Base.EnvelopeResult.html",
+          "hash": "+9aMrqMuJKlpW9vqSS9dfTAnKignQQ9b0lr2uHHHJo0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.Base.ODataBaseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.Base.ODataBaseController.html",
+          "hash": "p9yGJRvFtNOInIh/8CylxIRzwTJ6syEbr9n4uq5nucs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.Base.html",
+          "hash": "tb2mN624EcOsd/RiMsQfYhVVs17b6wK7H6fIkKK0qus="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientGroupsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientGroupsController.html",
+          "hash": "CB2eA+aKhsBWZ4uRNgVEnTHrE7IpvncSWDSe/AOjeZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientHeadersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientHeadersController.html",
+          "hash": "7CGujZ8KzJqckoELNt3J+KbFxeuSNuEV1DI4FjlqDw4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientSuppliersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientSuppliersController.html",
+          "hash": "dCCGlmh+DbvreZiG4Mz3q+Z6wXXeaKNVj9sEeG6oPzg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientUserSettingsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientUserSettingsController.html",
+          "hash": "7Lv3mDOmAorB1w6SAg9y/mtTg9agegstvdz4lLjzh5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientUsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientUsersController.html",
+          "hash": "9UknXRq1GRIfXQyEkJ/UIydUVdibopDQ6WDRYCrUQls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ClientsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ClientsController.html",
+          "hash": "KfrX/TcoroPDf6IOWqpJL6JLv8RQ/Ci6+1cx6MjUZ/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.EmployeesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.EmployeesController.html",
+          "hash": "30ObnbD8sInd60ZAkNUExJUOtVWyCt2Hwl/pn5/D5ss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.OrdersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.OrdersController.html",
+          "hash": "cJNbb/7fBKawVoNvkYhB4irkFH6W8jn2FxjdxMyCQkk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.PoolEmployeeDocumentsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.PoolEmployeeDocumentsController.html",
+          "hash": "tNraky1By8xKONnxumMu8jrE5dinhsmM6aw6uxE/Lfo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.PoolEmployeesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.PoolEmployeesController.html",
+          "hash": "qNECJNVdogS/EqwmiRHLc6381iOA9bn1yu18c6nTGS4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ProposalStatesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ProposalStatesController.html",
+          "hash": "SI6EbZHXQAP+vp9E0elQWuZsBZgGzvbjDSQvIJo2ZZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.ProposalsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.ProposalsController.html",
+          "hash": "T5oMXVWn6lND7cPb3FEvXPpNotsLr2W5mTAf9RiVWPM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.SupplierHeadersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.SupplierHeadersController.html",
+          "hash": "4+V7SdcH77/vzdWOp/Y3h6hRJwgyt3u1fIDMMt95naI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.SupplierUserSettingsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.SupplierUserSettingsController.html",
+          "hash": "wUUjYGK7tcIMJOR4sqjhGmgw4f1d3Eg32PZObNlgTJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.SupplierUsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.SupplierUsersController.html",
+          "hash": "hrLg+F+Q6k4w1zEmmL1o34a8imQsyTM9z7lm5T4mSbA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.SuppliersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.SuppliersController.html",
+          "hash": "zNmtmzvoL4/1Kg5WnqMbjg3mB5K1YCo4Wqgnqe8RAOc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.VacanciesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.VacanciesController.html",
+          "hash": "06aWVAWMO0ChcaeWQdIKCZudqqsj7yriZK3F8rAZWtY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.VacancyStatesController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.VacancyStatesController.html",
+          "hash": "U6AjmXs4f36I2tuFMeAhDTxbSdn1eIpTB+iswYfqlZc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Controllers.html",
+          "hash": "6Li98dCHEcHGitkePAXGxDWWZ83GjA1vxDgzrVGWQ34="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.ApplicationDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.ApplicationDbContext.html",
+          "hash": "nw/UonZcNNNQyNoDdV7VrW+fLjTEZ1WR/49FWTKT9Hs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.ApplicationDbContextFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.ApplicationDbContextFactory.html",
+          "hash": "Zc0lbQhqpJI7+ruHTFqgS8OWdbZ4s6na4QfXXEC2onM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.DataSeeder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.DataSeeder.html",
+          "hash": "Dh8fzGnxQUXWNHkHqRxUjFsCaN9hI53wfnv2uNsqtfI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.IDataSeeder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.IDataSeeder.html",
+          "hash": "eDML1B4d74O475LklvwygmLl+4LorgZlSs5mLFnb7DQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ApplicationUserMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ApplicationUserMapping.html",
+          "hash": "5OF4/+sngEnfdNRrP/anFODY5gKA0TX/wGwPDWtgs9k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientGroupMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientGroupMapping.html",
+          "hash": "ZbnxEqsfBAxvswibGpGWy4J3bxhVf4FZxfiDM+jRzfk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientHeaderMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientHeaderMapping.html",
+          "hash": "tbMF/TVyMwexqtFMYw27ge4Rp4Jh7TnmBvXYxYJWzmI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientMapping.html",
+          "hash": "FbHswJb1cD/Zghdq0BiZ7E3xf6rdraAnVBex4SbvKGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientSupplierMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientSupplierMapping.html",
+          "hash": "WNuXNM5XBXUF3YFVgUgqcJTOpnMlz8eacPIMMbXKmtg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientUserMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientUserMapping.html",
+          "hash": "4xhTkMonMXrF/Nzf3bXm68NIIRTIg2KQT7k094QsMTc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ClientUserSettingMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ClientUserSettingMapping.html",
+          "hash": "AXATSJkKxlvUQmI8cpya3kM5kndWlzqyaYCP9s6tyHY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.EmployeeMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.EmployeeMapping.html",
+          "hash": "ank8L8jbbz9xX3FJENq1AEFvRrOHl5fBmvejgJO4EqQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.OrderMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.OrderMapping.html",
+          "hash": "z/3mKiLBX42/NXrp+fMoo8yQBcD1QOlm0qa7f6AIrOo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.PoolEmployeeMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.PoolEmployeeMapping.html",
+          "hash": "sa0iXn2HX4HEFR/Qz3wcnhDEWBSPuJTxjjBc7XuqPN8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.PostalAddressCreationDtoMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.PostalAddressCreationDtoMapping.html",
+          "hash": "psiO/No88jbpDjz/0eK0EXJbsgvC7FqsTimaUCgG8ZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.PostalAddressMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.PostalAddressMapping.html",
+          "hash": "psjzC6iqiAefdIUoL8wSd8ByqtQqzk5URq1js5aXyJ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.ProposalMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.ProposalMapping.html",
+          "hash": "+E8yGsuq+10cXxOYq6c1o80fEIPAz4/gO1ugNF27iKA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.RecordCreationMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.RecordCreationMapping.html",
+          "hash": "3gVQN+iNw0+dlonwI5Zwo0M7lN5Sccai+EOtVcKDIPg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.RecordModificationMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.RecordModificationMapping.html",
+          "hash": "hCuP6Ox6488SHqxWeENm01fTNnplowXjcKUQBSmWYAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierHeaderMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierHeaderMapping.html",
+          "hash": "jaBKFzU70wt4oTsyUHWH5kkuSgwpPSPjPLAFBtPgiq4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierMapping.html",
+          "hash": "WF9hd2GP+BhVA/ETCJX6u77p+Dwvm/aFbLIDf8LLs14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierUserMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierUserMapping.html",
+          "hash": "QoqhR17FHjYN1ebC1CYHBzgLF3Yroih9O4ngXh55JXY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierUserSettingMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.SupplierUserSettingMapping.html",
+          "hash": "YL0cyWmVJ5EW9QQQps+SJDkaVLUSAH3UvFYUaTwXj+w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.VacancyMapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.VacancyMapping.html",
+          "hash": "Vf8aRKndK5Pw447xOzxMksPK835T843a5tLykRTN+v4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Mapping.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Mapping.html",
+          "hash": "n0sqjIhDHrozkgABk22P+XghLPgpadIqSXXEi+xueW0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ApplicationUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ApplicationUser.html",
+          "hash": "xnFvQIzh/yWr2Hp5IfQ6//4LHmcKWATEOk2JafgzCb8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Assignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Assignment.html",
+          "hash": "38LF3Q8VP7+xZ0kbY9bry/vb4iRgVL58XiQCJPnyt60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.DatabaseType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.DatabaseType.html",
+          "hash": "4WeG/TSAK3Z+VzoiFvNAxerge2rW+/yPg/8vRPKIXZ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.Entity.html",
+          "hash": "ZcV08nvs6w9N6haAAsIGtRTZkdr+5M/TvfgEqtJBqTo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.IEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.IEntity-1.html",
+          "hash": "Vy6JjMbZ5n8FIpWzeXXuV+RfvZBkLjHOjVM+7Z4NZ7g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.IEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.IEntity.html",
+          "hash": "RdN5feDzXiA5s+7DaqbbOax+q0kt+ZZ9LRo6mpPvoaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.IRecursiveEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.IRecursiveEntity-1.html",
+          "hash": "HxtOnP+ssvH5oaYBvaP8O8BV1++ciQVXMn+b9PCrbk0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.IRecursiveEntity-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.IRecursiveEntity-2.html",
+          "hash": "ZywPybxXGs3T9P1M/vZUjrs79ypQQShOL02xM+n8R84="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.RecursiveEntity-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.RecursiveEntity-2.html",
+          "hash": "AUnxPodq3gN+EP8s73aajqXQxUI1zfkEXMgIqop9BlI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Base.html",
+          "hash": "TSfpgX2y+yPmjzDuB6A1UJQDmndr7pDDKreFKh4lDrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Client.html",
+          "hash": "RhFmrf3RoHNijNAgSEesNqeYDi9qzdWbjpwh3x/S4c0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientEmployeeProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientEmployeeProfile.html",
+          "hash": "SLGUby3KXKYQTNzyPximS7zNAseZVAXxael2HEgYHIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientGroup.html",
+          "hash": "q6DclGnF4LBDwSBDM9GC2TAKcB59ZKXLKBF32Lvenuk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientHeader.html",
+          "hash": "GNUSP8eDvi3+ePZ0OlITyO2TvuD6U6EsqZ3ZB0mJOeM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientHeaderAdmin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientHeaderAdmin.html",
+          "hash": "YhB0IGlmR2R77s4/mlITZqF8ZpAYkhVtL+0pxMeuQTE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientSupplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientSupplier.html",
+          "hash": "1/9CDm6eGbSbXfF2K4vuzfvB6x9ZPJDz173Ap59kDv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientUser.html",
+          "hash": "VaTwupIFQTkcUsUU4gzGlFNb9SLBFMxaQxikXAGZbis="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ClientUserSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ClientUserSetting.html",
+          "hash": "xWDIWJPeULocz4tZq4fr5wsYPebT+bu0cbz1Tvb406Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Employee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Employee.html",
+          "hash": "BlMqEPDLPdtxMkw0nmo1RgldjZU9hEo5dQcNZDGhuo0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.EmployeeProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.EmployeeProfile.html",
+          "hash": "4SZAUq74DiABOi6534ymM1QCNOw8XhKb240RTgH/bxw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Order.html",
+          "hash": "hGeVIJT2XA0CzUuIQnNUvyQcW64C1KWMeWdNksiDGaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.PoolEmployee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.PoolEmployee.html",
+          "hash": "d+eZ48lqTzoyDOeO5IlQD5Evqn45vWKyexPjcetZb0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.PoolEmployeeDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.PoolEmployeeDocument.html",
+          "hash": "E/rtlinR2KyVTK46SXy3uw6UHwJ2joZhbLOwzQY7tQw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.PostalAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.PostalAddress.html",
+          "hash": "92GQ7RC0R7VqkdaS2e1OjF6NqI0Vkf4M0lCQ0QWn/ls="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Proposal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Proposal.html",
+          "hash": "rk3m5yT30MrkbeXwaZCTMCqv42O6nBhZ2BZU4QEsDwA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ProposalDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ProposalDocument.html",
+          "hash": "/MOit9vzdI/MiJJkPY9dU5Qjf79zuQjNFs3B5SApsRQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.ProposalStateHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.ProposalStateHistory.html",
+          "hash": "y0EDJyew9FynmRbO/iprKzumgd0Nn04OxYl0MAryia0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Rating.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Rating.html",
+          "hash": "Qd8SJdN/hXNnUJYLmLyd1QHhpZ9FNaNbj+yRG3p8U9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.RecordCreation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.RecordCreation.html",
+          "hash": "hID/+qnkh43PepSn0TL2daHb4HBvUUhSMNP016tYNVs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.RecordModification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.RecordModification.html",
+          "hash": "7vaX5/2m1UoVnooY0eU+Ovz7xU2EfIE2oHOpz3EJkkA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Supplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Supplier.html",
+          "hash": "HxLYcNrEup0d68/38HYTAlEJugh+VClTRAKrLEtbbuE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.SupplierHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.SupplierHeader.html",
+          "hash": "hoLTVz6Iz+nVuCSMNNORf/N677yJ/ZnWB38JXJpd8yQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.SupplierUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.SupplierUser.html",
+          "hash": "fiydXey0xJi1mJdTnflyDHcRpMDT/CFNYi/ZkmCsYU4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.SupplierUserSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.SupplierUserSetting.html",
+          "hash": "iORixgyRulLJ1w6xKwj0e51HPSXsmhGBTXBKy2N1gmc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.TimeRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.TimeRecord.html",
+          "hash": "KgG7ciPBp+CrwAlOw2HtvxwFcQHFDBMUdblIJY3phXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.TimeRecordStateHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.TimeRecordStateHistory.html",
+          "hash": "D/ISAjEWS4jgw2M0md8V/1z6q7x7DzTAh28IGLepmfY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.TimeRecordStateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.TimeRecordStateType.html",
+          "hash": "hHDf526WVtxKt/Zmu8/ephTLD1xI8jZWLOvaIJ0m8OU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.Vacancy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.Vacancy.html",
+          "hash": "XAQFjSmqIXanrU12uewU3pCqbEDmbA8pWCfcaltmBWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.VacancyStateHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.VacancyStateHistory.html",
+          "hash": "xAaAwxt3lcls8hyiPS/AGitDZAw6d5DmAUB7olbsZ1c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Models.html",
+          "hash": "ANoJ9np2N5K6dhxBNBI7+V+Y6p23e+YmcA2MW++zyec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Repositories.ApplicationUserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Repositories.ApplicationUserRepository.html",
+          "hash": "zmJdoeE9wdkOt1uqLq0hp7jC0GZHn8ZmGkkdqOYQC+U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Repositories.Base.IRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Repositories.Base.IRepository-2.html",
+          "hash": "TUXF30eBtL+hEIR9S4jEEB2yIB8Xn5GVL9wlCUraiR4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Repositories.Base.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Repositories.Base.html",
+          "hash": "TCOsitRRsukuMBv13gXhjQTRth8IVcsMLpufgjFKc/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Repositories.IApplicationUserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Repositories.IApplicationUserRepository.html",
+          "hash": "rOrLvSzgXpVu0rdPjuU0HaqqHKoPvkHP18qrIhOcu1o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.Repositories.html",
+          "hash": "mZI7d+b2PfHqEW/vSHW5GtIkvwAmTABDncDvOEii38U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Data.html",
+          "hash": "s6zrZmlfZL0Bis5xM8V7SzwrjXK9MikwWjq0s43ZP7I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Extensions.ByteArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Extensions.ByteArrayExtensions.html",
+          "hash": "ia9oyRlRZ/04mSN+OcRRIveSucPDSAmiAvXXnHLREK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Extensions.OdataExpressionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Extensions.OdataExpressionExtensions.html",
+          "hash": "oJRzwyakfekc9/zLJpRaE5LsMmkRiUBZNCCW2oEuDz4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Extensions.RecursiveEntityExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Extensions.RecursiveEntityExtension.html",
+          "hash": "cVCVHhNTGVO95QB8ZWh9Sto9Grz8C81HnjxuGLpgRoc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Extensions.StringExtensions.html",
+          "hash": "ytSK7bvj5BY1BhWjcP14XMg1YCacg7ltqgCC83TBmrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Extensions.html",
+          "hash": "dclZcv2eJn1zOufyFcEeRF9zLC9DyUJLpk7bnUqT9Mg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddUniqueEmailIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddUniqueEmailIndex.html",
+          "hash": "ewjNJVp7rowOHS67wh4r7gD0fMDBBzKqpX5GCwQ8aKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedAddressAndContactFieldsToBranch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedAddressAndContactFieldsToBranch.html",
+          "hash": "NU3YG93b04U9qGahyO/RhMe4xRvWkAmkhI+EcSHEfwg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedBranchVacanciesNavigationProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedBranchVacanciesNavigationProperty.html",
+          "hash": "CiGVCFqGAng5LW78yBO0EL80HyLUK5b6cF30Tya2ajE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedByteArrayFieldToPoolEmployeeDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedByteArrayFieldToPoolEmployeeDocument.html",
+          "hash": "AsMs2Z8nud5IehZxS8n5GtTcu+qQaCpWdg7YovFVsLQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedColumnsForEmployeePool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedColumnsForEmployeePool.html",
+          "hash": "VLgPAVAMkcrVKHcsAB0sMLJXsR3AwXd3ZwBHtxvbkTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedColumnsForVacancy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedColumnsForVacancy.html",
+          "hash": "xOvuxAzPXAJdV8Y5VhIVs4A74qJAMx2LDfSoSR2ekn0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedCustomerHeaderAdminJunctionTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedCustomerHeaderAdminJunctionTable.html",
+          "hash": "+fXQCklF2X5oCDA8fL90KELY8cJifPuozUw5jC6HTEw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedCustomerHeaderTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedCustomerHeaderTable.html",
+          "hash": "npBGoIAD5A0mW+WVyRK9bGAzk5f3Bj32NfFzcYlgd0A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedDossierDomainModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedDossierDomainModels.html",
+          "hash": "1J0nGpUSBjAH4bSnZ5geUTRI/BH80vJiX3IDtbCrFSI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedNamePropertiesForClientHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedNamePropertiesForClientHeader.html",
+          "hash": "g3C8ssY078BUZJpM3irj28+yLADAccRswO60GLVA1nc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedPoolEmployeeAndPoolEmployeeDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedPoolEmployeeAndPoolEmployeeDocument.html",
+          "hash": "NHfSJ4FliUcKqeyO+3qmoN9byELJI0GnZeOdtYTuNWA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedProfileAndBranchProfileJunctionTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedProfileAndBranchProfileJunctionTable.html",
+          "hash": "F0uuAKdgQsDIyHt8y63JB6Jy2kolSO1tlAhgwE8EHTA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedReferenceBetweenSupplierAndPoolEmployee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedReferenceBetweenSupplierAndPoolEmployee.html",
+          "hash": "pnA4HYeuZDKbdj47CnZAydTXEu01Byn79p+HfgiiJBA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedSupplierHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedSupplierHeader.html",
+          "hash": "3qEaLEogrJgLkWwj7uoWWpBbWXezBnxWqqjfO6VyC1w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.AddedVacancyAndRelatedDomainModelClasses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.AddedVacancyAndRelatedDomainModelClasses.html",
+          "hash": "yAH6+LR7N/BwW+JSrqfvxhBzz88DXUluOLUukhRJwJ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.ApplicationUserTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.ApplicationUserTable.html",
+          "hash": "JrWZuZgAcDDCD3EdIDY3XMUJr0ACpe7nwEuqR3gPhs8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.CompletedDbSchemaAccordingToPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.CompletedDbSchemaAccordingToPlan.html",
+          "hash": "wJy9gCoOdd3ub4M3zvhbiVGV5eHSH9mf6e73wywS8Qk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.CreateProposalDocumentTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.CreateProposalDocumentTable.html",
+          "hash": "PZoOhcUn5WyLQZOnxx+lzEBG69SR1Zge+Erv1ZJuZl4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.CreatedCustomerSupplierAndSupplierUserPermissionJunctionTables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.CreatedCustomerSupplierAndSupplierUserPermissionJunctionTables.html",
+          "hash": "pOOiH24kdRKZ47yvFH38zlbthWSH8vn0q+QD+7B5UO4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.CreatedEmployeeToClientRelation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.CreatedEmployeeToClientRelation.html",
+          "hash": "Th3zagMZdHHaW2oG27q14uLMj+mNFtdo76avVRv038Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.CreatedEmployeeToPoolEmployeeRelationAndMirroredColumns.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.CreatedEmployeeToPoolEmployeeRelationAndMirroredColumns.html",
+          "hash": "Z6ZYUO4AuvZ6gfKowTLg36yfyarkpWm94MV1hd/mcsA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.ExtractedPostalAddressDomainModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.ExtractedPostalAddressDomainModel.html",
+          "hash": "8GMAbDTLW2mfYruisCGXnVYW7IYICEuXf8q3S9HRhes="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.ModifyColumnTypeUserChangePassword.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.ModifyColumnTypeUserChangePassword.html",
+          "hash": "SVDzUyB/wwK6qeKdp8yTKEbmrBERnF93ET3YapdEAIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.RenameAllTablesAndColumnsToMatchDbSchemaUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.RenameAllTablesAndColumnsToMatchDbSchemaUpdate.html",
+          "hash": "8OhlAEWhLeet6EV9cmh11m0LPIL/88E21a8cEZl8p/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.RenamedTableVacancyStatesToVacancyState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.RenamedTableVacancyStatesToVacancyState.html",
+          "hash": "ZW4TIBa1/DeyT70tezuD4vtrFAN44v8J/r67wDZFHeU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.RenamedTablesProfileAndBranchProfile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.RenamedTablesProfileAndBranchProfile.html",
+          "hash": "ztLrTGrXbfiV+D4ZIWkVm3D7kqLje3If6guuqMXyru4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Migrations.html",
+          "hash": "qsspNNGdlawxMBngyejO07h7/7UP+i7UCR6jXF3hXMc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ApplicationUser.ApplicationUserResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ApplicationUser.ApplicationUserResponseDto.html",
+          "hash": "HsP+u1mxTDOxSaPjIXS3NLaiIqEG712kA44c0zQ5veg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ApplicationUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ApplicationUser.html",
+          "hash": "ZYLYWgtWJlGnvGM3CV7/7XIv3df5FlWl6XbJTibBIC4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Auth.SigningPublicKeyResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Auth.SigningPublicKeyResponseDto.html",
+          "hash": "RlKXD0wfWrO3liKAENAVft4Nfgp7fqj7VhQjJB1KOs0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Auth.UserMetadataResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Auth.UserMetadataResponseDto.html",
+          "hash": "KC3x/8kbrOtVOpKmzthAtP0QmktziZZ0mMjqi5uleok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Auth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Auth.html",
+          "hash": "PPsqZFr/Z0IIldPacZsUgxLor0Y+wlsFeq2DCWKu44M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Client.ClientRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Client.ClientRequestDto.html",
+          "hash": "XkLxW0YCjWy+Y7VGSaD6yanLworuw7LPdbt9OATeymI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Client.ClientResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Client.ClientResponseDto.html",
+          "hash": "gBiBS2Z2iDKv+UDxvp0liZMWDdmffZIU2LlE4tw7lnQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Client.html",
+          "hash": "ovmrSql90s8ApDHTkIT6leZMPZ8LrtS9I3V1SeJNC5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.ClientGroupRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.ClientGroupRequestDto.html",
+          "hash": "OFTeM4SlWTytmIhpUpo88hf9l6B3sUInUXefaKh7YL8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.ClientGroupResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.ClientGroupResponseDto.html",
+          "hash": "fOXreTEX2Mfqevaf4RNguaqOiIdIpyhBHFTE4tbAT2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientGroup.html",
+          "hash": "dBE3I9Zr82TMD8mDW3xJXWvjv5MsRVDo7xwcW0V7P5E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.ClientHeaderRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.ClientHeaderRequestDto.html",
+          "hash": "2o04qFhVpqlKQ6RwAKmegT9bl74IxCqLPkMqn6urcAE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.ClientHeaderResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.ClientHeaderResponseDto.html",
+          "hash": "yEJlieKXBYl16HEvIOfhhBlYPGe+mAPkZg/zVrdPR60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientHeader.html",
+          "hash": "/7iqXDc+/wvFhX1gW6ZlEV7xekElMXOM41w5K/FFUOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.ClientSupplierRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.ClientSupplierRequestDto.html",
+          "hash": "ydVmxJPJfcFacmvDtPeuMTlTS/RtcJPQbaJ9LYJHz6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.ClientSupplierResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.ClientSupplierResponseDto.html",
+          "hash": "36IyOiknmKa0JQnUbZU7Q0PS0LGfiDC+F/X14TCy6lQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientSupplier.html",
+          "hash": "A4TWr6e+tKdElQ6hEsu7HubolvmWFzfqlx4qLbGGTrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.ClientUserRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.ClientUserRequestDto.html",
+          "hash": "69wvXAzRFExPQZU+ZT4e/iDWJGNUy1mjw/21gv5oDko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.ClientUserResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.ClientUserResponseDto.html",
+          "hash": "tzRCt1pEjepUBzhIqssd79UzxE92motLgp/+dSY06qI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUser.html",
+          "hash": "DLwCSQsZgaicWiuIOT1aegbujK7UdP5RguA45MMz3fQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.ClientUserSettingRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.ClientUserSettingRequestDto.html",
+          "hash": "1FgSp9OfUu7IsYMfk/Y2peVfERFFCGluSi7L9PeHSXQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.ClientUserSettingResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.ClientUserSettingResponseDto.html",
+          "hash": "UORhRc/wf4Wyj2JAiGNqGBblgh7X264XInv9mRVxcTk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ClientUserSetting.html",
+          "hash": "Rk71M0qEuQlkX+CfsX4lUrEbJ2i7vD5GKAcZIjfEvnI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Document.DocumentUploadDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Document.DocumentUploadDto.html",
+          "hash": "D1CJciND+ByKuCo9tIAWSI9nQeCJl4xlJoUKvgSFnOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Document.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Document.html",
+          "hash": "DdZzqysanW0Zc8APyxaY4P7emIiPvGBLJqKjvGlTEnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Employee.EmployeeRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Employee.EmployeeRequestDto.html",
+          "hash": "2qd4ZZDm3x1oJjWbt88wzusn63Ral1n9mfuF3Pf2OVg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Employee.EmployeeResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Employee.EmployeeResponseDto.html",
+          "hash": "rAfMD+h06DesXajgbJnRHIlW3WSjE4hYYjDEW7Dfs+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Employee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Employee.html",
+          "hash": "gXbrL3Aa36ozl8MtljF0FXLjYZ8LG+BOiGGcHtXDBl0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.General.KeyValueSet-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.General.KeyValueSet-2.html",
+          "hash": "/HrTXmwsGyF6Tdl61Beyut8Pr9Wye8u7dAnLEcPUtDg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.General.html",
+          "hash": "tDrlPzZqymJiRooBLal2eiTvLP25CspPCd5pxA4MfcQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Login.LoginRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Login.LoginRequestDto.html",
+          "hash": "cBzEZ+2Jk+oj+tnTJP8bs9zpNVcOL0Cyx/+yEsx3G50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Login.LoginResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Login.LoginResponseDto.html",
+          "hash": "SACZ3ZCu/kmhB9IORVkj5+OA/3nn2xf+psrOdGu11Ws="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Login.html",
+          "hash": "PfJO/QK7ZtGptia9XvQdu0q9IFnNuexhMmnKWL529oc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Order.OrderRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Order.OrderRequestDto.html",
+          "hash": "1/H3/bwELt4PtwXM4cUHyTrKaW1RTdWrSRG269JPBoI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Order.OrderResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Order.OrderResponseDto.html",
+          "hash": "Zk+4P5je2SlQ/dJM0bV2C/s1aqgHlKL8Tfh6aw9eTzI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Order.html",
+          "hash": "Y2k8MluVBM/FZa8QRwY2mvBjkLOeJqs+S6Mr/zcZn78="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.PoolEmployeeRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.PoolEmployeeRequestDto.html",
+          "hash": "mqMdGaPB56CsJ0ntcIOaGmXCKddl5gOCEk5eS3V/rhc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.PoolEmployeeResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.PoolEmployeeResponseDto.html",
+          "hash": "L7oW6yi5zisW/yk4ayFjTZ9TCuLm2oCQN3BqqK24FzA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployee.html",
+          "hash": "aB20Iy3sLVicHzS1hAibs9mcC7WiPbY5rtKCmfkKUso="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.DocumentUploadRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.DocumentUploadRequestDto.html",
+          "hash": "I6aRcRLl+gg+blVRgt0QOyH+OcSv0jHDPzp4N4TgrEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.DocumentUploadResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.DocumentUploadResponseDto.html",
+          "hash": "0p5muv7JSgV3qHrPKPCOIevGjPhWuUDaWd3iLWJ75aA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.ListDocumentsRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.ListDocumentsRequestDto.html",
+          "hash": "l+qkvZwPSQx+ViHtxWIoTc71Dv6yzbQX3rs1uEIZM28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.ListDocumentsResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.ListDocumentsResponseDto.html",
+          "hash": "+viv3EuxMv6VmQz6L6SVeL2E96TIkbl8X7GnirpkHy8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PoolEmployeeDocument.html",
+          "hash": "VdbKAa9Zh1vjPWn6TKAAzy/YeoGg4GE9rz9+NXf2LII="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressCreationDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressCreationDto.html",
+          "hash": "ByYhXcfz8gxhpgEQYwSBSxuCmHMWoEUwVUVVlVWfb/w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressRequestDto.html",
+          "hash": "Ww1rr8ia4vybHTv2C24adDYyR2hAfWaCMBXoCzxJTSw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.PostalAddressResponseDto.html",
+          "hash": "AGJqNgDo58wS3r3EplPH/ldWWzOuUE6Ue4RuD6+gUx4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.PostalAddress.html",
+          "hash": "jM3epYsIMRMTbSBRraEIJTjkYjW+YQEsnzGpixUhaJw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalAcceptanceRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalAcceptanceRequestDto.html",
+          "hash": "1k7S69dfubP88gQ6Tsqhn4n0aQi1B0GYe70uu0oOpik="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalCreationRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalCreationRequestDto.html",
+          "hash": "K2pcE98S1PTc7jB9r8n0L99uuRGH9B/aSOoNpVlxI0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalCreationResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalCreationResponseDto.html",
+          "hash": "zfGJht3TnZiaRee4rGF7/iepVVzs6gw3IILK3DHWTmU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalRejectionRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalRejectionRequestDto.html",
+          "hash": "G+hWXQX74ERxjkYoGTlDaDubYE/fzgcsbsC3VjcmT50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalResponseDto.html",
+          "hash": "TPgwBz32qGOWsYAXi1aSHSzx3wIikewD6yHX5Yowahk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalStateResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.ProposalStateResponseDto.html",
+          "hash": "aWPLEiPAuxThJW/ExuYL+oK0IJTm6jhyzuL/OfM49EQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Proposal.html",
+          "hash": "82ewurYglgewVyfuIstt/Pqo3teOKgicPp9Q94kN9Oc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.RecordCreation.RecordCreationResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.RecordCreation.RecordCreationResponseDto.html",
+          "hash": "x3Abk15IfxDQePmhI7TbDaEu/yyufvvsTFO5a893Khs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.RecordCreation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.RecordCreation.html",
+          "hash": "BknkpEch6UHoqIe8DmaNSUOFkcEwb7wwfi2kyWu8a4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.RecordModification.RecordModificationResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.RecordModification.RecordModificationResponseDto.html",
+          "hash": "h2C/UbOFofheJx5rt6lSjJIBNHg7T+yho/KwMD1KFBc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.RecordModification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.RecordModification.html",
+          "hash": "zSuRQpZGkKExcF6RJYzaHZgPNKoaBudAyDjn8bRbrUU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ResponseBodyDataDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ResponseBodyDataDto.html",
+          "hash": "2A9dNDU/ozaWAfnGabZFgiLcWKmh2RIHsYxxdtu4b8o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.ResponseBodyDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.ResponseBodyDto.html",
+          "hash": "1DM3f6LQhEwtgw2OCyzCFrpew2ZqJ9312q4dHBTNP9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.SupplierRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.SupplierRequestDto.html",
+          "hash": "i5saPMetJJbi9Neg6UauYaZ0cqdUdeYJuXAYjmeVc7o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.SupplierResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.SupplierResponseDto.html",
+          "hash": "dcPDJg7452G+fm+Ci09iPvjEOOb3YCyCuHGnBPNFgJ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Supplier.html",
+          "hash": "Q3i5SgOyluAV6NBX/dV1xJhin5FIGMU5XsxQJ+mVtcc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.SupplierHeaderRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.SupplierHeaderRequestDto.html",
+          "hash": "KFHCXYtxUiNVxfL1lUIFXbsjK6RfA/YgQ03RQ1tx38s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.SupplierHeaderResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.SupplierHeaderResponseDto.html",
+          "hash": "7jmWBNbGHhLdnxaaTnsFncvpZZpzPepCuXjqszsQ8eI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierHeader.html",
+          "hash": "nEFFu0WBIfocfFZR9KzBD/rSUcBMihM25H95B4p66PM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.SupplierUserRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.SupplierUserRequestDto.html",
+          "hash": "E0oVOTuUs9Oy6TkfWHhOyb1RpQ6CA7IsumQJlaQWOhA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.SupplierUserResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.SupplierUserResponseDto.html",
+          "hash": "4JEvc8KifDA07eXDFT7A3orVNXf+LbbQ3oW9XJzIHZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUser.html",
+          "hash": "mjtdnHiG7rfYeZgIL50FsSVM4naRs+nzOzR+u9f86fU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.SupplierUserSettingsRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.SupplierUserSettingsRequestDto.html",
+          "hash": "s16rQXX3dGjNQs2nFqnqjYKhRM9L9mEuNyY0qK75wQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.SupplierUserSettingsResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.SupplierUserSettingsResponseDto.html",
+          "hash": "/WcyR+maGjrSoOWXA9d+YZhnRjPcTHqRUYMFGHWozuI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.SupplierUserSettings.html",
+          "hash": "0vTqSoI5Nw9dli2ZO1JqB1tgg/TIemWK0iyy+taX9og="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyRequestDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyRequestDto.html",
+          "hash": "CQq3gctYhZxGXFYK0rH1IT7vofe83uRKUyB5rz4/NJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyResponseDto.html",
+          "hash": "a9vEYXaK1IgSYBIfFVkru/Uny4k9e3JHP2AWe5F7og4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyStateResponseDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.VacancyStateResponseDto.html",
+          "hash": "4FPz4AWqH+fTxVW5iRJn3lq1af/fwbNUPEly4DPFlIA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.Vacancy.html",
+          "hash": "CFI4W9rJR7Th/DHK5tALmLijRl/x3tTsmzKP+JYwzMQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Dto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Dto.html",
+          "hash": "eIudPLAjXohWYt0RR24+gQ/XTj17SPRpNx8I2nFfmKw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Enums.ProposalStateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Enums.ProposalStateType.html",
+          "hash": "3wsitjrVvoGnGsXHE7g/FHX/WYYE5cyAnIBSfPjzsWU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Enums.VacancyStateType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Enums.VacancyStateType.html",
+          "hash": "WeE/NqDDV1wc3eEM+mpKGu4kesIbfRzno6H2Tt1SeCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Enums.html",
+          "hash": "R9WGPutQVTdiqON0MFXq4lVqopo/osxTk6askGDk+R8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Error.html",
+          "hash": "90glRB84nGc2uM6EtSykCsoIqEqTncIYshMRwdgI2jE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Filters.PaginationFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Filters.PaginationFilter.html",
+          "hash": "W06AxSsr33dWbBMfSk9A3E9VnWUEr7PeTTK5bNCn+Oc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Filters.html",
+          "hash": "STCvYnN50M6E1w6VV9fgdvlLyDOSsQ7EJkT5sXz0NVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Settings.Argon2HashingParameters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Settings.Argon2HashingParameters.html",
+          "hash": "6QARkzvwMDqcVTqmjHKsVFoLnY8dApM2yZD/LmjuYwo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Settings.JwtSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Settings.JwtSettings.html",
+          "hash": "XYgYJMg52Y2EwAeYwAJ42TvWDQEBEHOSll3qsLhLQBs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.Settings.html",
+          "hash": "A+E7Mr4AErrBKt8y+BnGYqVWyOnQ8OyPdY5z8zZhmyY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Models.html",
+          "hash": "nYE6dibqIYMYdeq8ditxxIbKEpH5XXrMXEWQg/UhshA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Pages.ErrorModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Pages.ErrorModel.html",
+          "hash": "yGy/3uHKO+b1essMl5gD6EDkq7cZZrt1R0G11MkK4T4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Pages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Pages.html",
+          "hash": "5wBeS1enpEZh0X+l/WLlbVMdiTsRUurGdZIAI9g+BIs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Program.html",
+          "hash": "QB9S7vfF9ou566MhRLHgVvAUEAEZXDqqtHG0W20S77I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AddressResolution.AddressResolutionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AddressResolution.AddressResolutionService.html",
+          "hash": "G8bgUZDt6X9QM1BEFam2s/7w0Qz3U9B6fSMLAoC9dwQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AddressResolution.IAddressResolutionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AddressResolution.IAddressResolutionService.html",
+          "hash": "1F4bLU1QOwPUi8UpAu4xWWYnjAS09traOnsw7JVhvQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AddressResolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AddressResolution.html",
+          "hash": "9jF/BajvjhDQLA2kTCgyQqTJiaNROrPm29aqtp0hAZQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AuthTokenService.AuthTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AuthTokenService.AuthTokenService.html",
+          "hash": "zm3lKSq8CUG23Zbr9zrIB8sDtzbduiiFXpMirbhYxlM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AuthTokenService.IAuthTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AuthTokenService.IAuthTokenService.html",
+          "hash": "RylUzhu4Fgm62kk151ABRI4CUApvKHKBMOd53q+btfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.AuthTokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.AuthTokenService.html",
+          "hash": "+LKq0bA1rm2oYBb7JaXkovY4HnftbVdhewZDFFkaSDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Configuration.ConfigurationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Configuration.ConfigurationService.html",
+          "hash": "pIjiXpJZAaWUbcWNpmPuVdrs1C2nAWrWimws1Aut9AE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Configuration.IConfigurationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Configuration.IConfigurationService.html",
+          "hash": "8YLjbeOhRke0v4evmYk3J2VsLk3wkRxj12ZjiGuPD14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Configuration.html",
+          "hash": "r3eItV2c60t0/AErzEJe3ecnAl+qVdy/wb4Ld9rZR5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Environment.EnvironmentDiscovery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Environment.EnvironmentDiscovery.html",
+          "hash": "T00zb7/JKbqeuM712F5WF3C4bWxM5WNARceP2hHaKlQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Environment.IEnvironmentDiscovery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Environment.IEnvironmentDiscovery.html",
+          "hash": "57Nas/jvduuu5bVYPg7rGPGjMtvqXqaTsNyrHsimOPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Environment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Environment.html",
+          "hash": "ftP1t/2mjuIqRjDpoJod5hvkDMBCFnAC0dTb0k2Z3Xc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Login.ILoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Login.ILoginService.html",
+          "hash": "ZMgENYbuq+R68Hzj3gomssA6eqvj+gRhJpo/xDj8rL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Login.LoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Login.LoginService.html",
+          "hash": "SlhRhi35iLVPlzf9ovXN6elH2s59GTdhRpp9j5GN3yE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.Login.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.Login.html",
+          "hash": "otNj6FnCDPiwdBiWd3Ni1+y1zrQKQYDnMeMuPmGuX8Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.PasswordHashing.IPasswordHashing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.PasswordHashing.IPasswordHashing.html",
+          "hash": "fzK4O0V/Fy7JzEoyDjT+3gHG/qMqpCRPVDKnnnUYoX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.PasswordHashing.PasswordHashingArgon2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.PasswordHashing.PasswordHashingArgon2.html",
+          "hash": "Q9UwFch40t3ShGSYpx0w/llvzOexxeyx938Xo8qRadI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Services.PasswordHashing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Services.PasswordHashing.html",
+          "hash": "yTX5WqzmHuhzPwLh6TztO4SRHCcoC+tU+HVRQNU6kQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.Startup.html",
+          "hash": "81xTGfip+yps/r/cfaJn1E7rGUIZhzNeZ1FmwnNZY74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DasTeamRevolution.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DasTeamRevolution.html",
+          "hash": "ZCxniBS5kf8oKPvnQ75pVT2WYGOpRlK/lw7KhYN/pew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "LavGBWUtw7I4dZbnduPYNp+8jPKbXqrnvgo1O4uFNyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "vyUA9c+wYwXh5odapjZxB2hP6qXUjeGSgSI/xAkgatk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "BlfuUKeWfo2VZk3Z6u72xW/TItBiJlVUiQJRUMM3R40="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "lDTIZDDYgv9GS4VI1344S6WLM3Q3bKq5wkFYZ2m3p+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "7e1QE1KgECA97P/Xj2W0bwiDgtda9rlB2xS/DSqMyi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "W0l8Jr9JcXlc1McO1ntn3ZnQVAmN9NmoYUhwsc0L/V0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because docfx version changed from 2.56.7.0 to 2.57.2.0.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "DocfxVersionChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 241,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+version: "3.5"
+networks:
+  dasteam-revolution-network:
+    name: dasteam-revolution-network
+services:
+  db:
+    container_name: 'dasteam-revolution-db'
+    image: "mcr.microsoft.com/mssql/server"
+    ports:
+      - "1433:1433"
+    networks:
+      - dasteam-revolution-network
+    environment:
+      SA_PASSWORD: "DEV_mssql-PW_356.4,DO_NOT_use,this.PW,for-prod"
+      ACCEPT_EULA: "Y"
+  web:
+    container_name: 'dasteam-revolution-backend'
+    build: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - dasteam-revolution-network
+    environment:
+      DasTeamRevolutionDocker: "true"
+      DasTeamRevolutionDevelopment: "true"
+      DasTeamRevolutionSqlServerConnectionString: "Server=db,1433;MultipleActiveResultSets=true;Initial Catalog=DasTeamRevolution;User ID=sa;Password=DEV_mssql-PW_356.4,DO_NOT_use,this.PW,for-prod"

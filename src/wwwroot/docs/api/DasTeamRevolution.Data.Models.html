@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace DasTeamRevolution.Data.Models
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace DasTeamRevolution.Data.Models
+   ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DasTeamRevolution.Data.Models">
+  
+  <h1 id="DasTeamRevolution_Data_Models" data-uid="DasTeamRevolution.Data.Models" class="text-break">Namespace DasTeamRevolution.Data.Models
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ApplicationUser.html">ApplicationUser</a></h4>
+      <section><p>Entity containing users from the application.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Assignment.html">Assignment</a></h4>
+      <section><p>An employee work assignment/deployment.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Client.html">Client</a></h4>
+      <section><p>Logical union of one or more customers/branches.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientEmployeeProfile.html">ClientEmployeeProfile</a></h4>
+      <section><p>Junction table for client/branch profile mappings
+(many-to-many: see db schema for more information).</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientGroup.html">ClientGroup</a></h4>
+      <section><p>Logical union of one or more customer branches.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientHeader.html">ClientHeader</a></h4>
+      <section><p>A client header for easy data inception.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientHeaderAdmin.html">ClientHeaderAdmin</a></h4>
+      <section><p>Junction table for the <a class="xref" href="DasTeamRevolution.Data.Models.ClientHeaderAdmin.html#DasTeamRevolution_Data_Models_ClientHeaderAdmin_ClientHeader">ClientHeader</a> - <a class="xref" href="DasTeamRevolution.Data.Models.ApplicationUser.html">ApplicationUser</a> N:M relation.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientSupplier.html">ClientSupplier</a></h4>
+      <section><p>Junction table for the client-supplier n:m relation.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientUser.html">ClientUser</a></h4>
+      <section><p>A customer's user account.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ClientUserSetting.html">ClientUserSetting</a></h4>
+      <section><p>Junction table for the <a class="xref" href="DasTeamRevolution.Data.Models.ClientUserSetting.html#DasTeamRevolution_Data_Models_ClientUserSetting_Client">Client</a>/<a class="xref" href="DasTeamRevolution.Data.Models.ClientUserSetting.html#DasTeamRevolution_Data_Models_ClientUserSetting_ClientUser">ClientUser</a>
+permissions (and may also contain various other settings in the future...) relationship (n:m).</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Employee.html">Employee</a></h4>
+      <section><p>Employee, often referred to as &quot;TMA&quot; (temporary employee).</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.EmployeeProfile.html">EmployeeProfile</a></h4>
+      <section><p>A customer branch profile.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Order.html">Order</a></h4>
+      <section><p>An order.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.PoolEmployee.html">PoolEmployee</a></h4>
+      <section><p>Global pool employee related to a <a class="xref" href="DasTeamRevolution.Data.Models.SupplierHeader.html">SupplierHeader</a>.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.PoolEmployeeDocument.html">PoolEmployeeDocument</a></h4>
+      <section><p>Document uploaded by a <a class="xref" href="DasTeamRevolution.Data.Models.PoolEmployeeDocument.html#DasTeamRevolution_Data_Models_PoolEmployeeDocument_PoolEmployee">PoolEmployee</a>.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.PostalAddress.html">PostalAddress</a></h4>
+      <section><p>Domain model containing a postal address.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Proposal.html">Proposal</a></h4>
+      <section><p>An application dossier.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ProposalDocument.html">ProposalDocument</a></h4>
+      <section><p>A <a class="xref" href="DasTeamRevolution.Data.Models.ProposalDocument.html#DasTeamRevolution_Data_Models_ProposalDocument_Proposal">Proposal</a> attachment.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.ProposalStateHistory.html">ProposalStateHistory</a></h4>
+      <section><p><a class="xref" href="DasTeamRevolution.Data.Models.ProposalStateHistory.html#DasTeamRevolution_Data_Models_ProposalStateHistory_Proposal">Proposal</a> state record entry.
+<a class="xref" href="DasTeamRevolution.Models.Enums.ProposalStateType.html">ProposalStateType</a></p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Rating.html">Rating</a></h4>
+      <section><p><a class="xref" href="DasTeamRevolution.Data.Models.Rating.html#DasTeamRevolution_Data_Models_Rating_Assignment">Assignment</a>s may be rated by the involved <a class="xref" href="DasTeamRevolution.Data.Models.Client.html">Client</a>s.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.RecordCreation.html">RecordCreation</a></h4>
+      <section><p>A DB record that contains information about a DB entry's creation.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.RecordModification.html">RecordModification</a></h4>
+      <section><p>A data entry that contains information about a specific database record's modification.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Supplier.html">Supplier</a></h4>
+      <section><p>Supplier.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.SupplierHeader.html">SupplierHeader</a></h4>
+      <section><p>A supplier header for easy data inception.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.SupplierUser.html">SupplierUser</a></h4>
+      <section><p>A supplier's user account.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.SupplierUserSetting.html">SupplierUserSetting</a></h4>
+      <section><p>Junction table for the <a class="xref" href="DasTeamRevolution.Data.Models.SupplierUserSetting.html#DasTeamRevolution_Data_Models_SupplierUserSetting_Supplier">Supplier</a>/<a class="xref" href="DasTeamRevolution.Data.Models.SupplierUserSetting.html#DasTeamRevolution_Data_Models_SupplierUserSetting_SupplierUser">SupplierUser</a>
+permissions relationship (n:m).</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.TimeRecord.html">TimeRecord</a></h4>
+      <section><p>Employee time table entry.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.TimeRecordStateHistory.html">TimeRecordStateHistory</a></h4>
+      <section><p><a class="xref" href="DasTeamRevolution.Data.Models.TimeRecordStateHistory.html#DasTeamRevolution_Data_Models_TimeRecordStateHistory_TimeRecord">TimeRecord</a> state record entry.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.Vacancy.html">Vacancy</a></h4>
+      <section><p>A vacancy.</p>
+</section>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.VacancyStateHistory.html">VacancyStateHistory</a></h4>
+      <section><p><a class="xref" href="DasTeamRevolution.Data.Models.VacancyStateHistory.html#DasTeamRevolution_Data_Models_VacancyStateHistory_Vacancy">Vacancy</a> state record entry.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="DasTeamRevolution.Data.Models.TimeRecordStateType.html">TimeRecordStateType</a></h4>
+      <section><p>The type of state a <a class="xref" href="DasTeamRevolution.Data.Models.TimeRecord.html">TimeRecord</a> can be in.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4201 @@
+{
+	"info": {
+		"_postman_id": "ee5a4137-4fd9-4b23-b3c5-92ffe5bf0402",
+		"name": "Revolution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Auth Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"michi@team.jobs\",\r\n    \"password\": \"start123\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						},
+						"description": "enter email and password to login. you'll retrieve a bearer token that authenticates you."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User Metadata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/whoami",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"whoami"
+							]
+						},
+						"description": "Returns metadata-infos about the currently logged in account. \n\n| property | values | \n| --- | --- |\n| userType | ClientUser or SupplierUser, if none of both, then it's an ApplicationUser (you need to create either Client- or SupplierUser |\n| headerName | the header of either supplier or client |"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/login/extend",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login",
+								"extend"
+							]
+						},
+						"description": "Use this function to refresh you token and its lifetime."
+					},
+					"response": []
+				}
+			],
+			"description": "Provides methods for Login, Token and Metadata"
+		},
+		{
+			"name": "ApplicationUser",
+			"item": [
+				{
+					"name": "ApplicationUser CreateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/applicationusers/create-dev?email=peter@team.jobs&password=peter&firstName=Peter&lastName=Supplier",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"applicationusers",
+								"create-dev"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "peter@team.jobs"
+								},
+								{
+									"key": "password",
+									"value": "peter"
+								},
+								{
+									"key": "firstName",
+									"value": "Peter"
+								},
+								{
+									"key": "lastName",
+									"value": "Supplier"
+								}
+							]
+						},
+						"description": "Create a new generic ApplicationUser (afterwards you can create either a SupplierUser or a ClientUser using the ApplicationUserId)"
+					},
+					"response": []
+				},
+				{
+					"name": "ApplicationUser Select Filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ApplicationUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ApplicationUsers"
+							]
+						},
+						"description": "retrieves all ApplicationUsers"
+					},
+					"response": []
+				},
+				{
+					"name": "ApplicationUser Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ApplicationUsers/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ApplicationUsers",
+								"2"
+							]
+						},
+						"description": "Get all Infos about an ApplicationUser by its Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientHeader",
+			"item": [
+				{
+					"name": "ClientHeader Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientHeaders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientHeaders"
+							]
+						},
+						"description": "Get all ClientHeaders (this is the top-level for all Clients)"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientHeader Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientHeaders/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientHeaders",
+								"5"
+							]
+						},
+						"description": "Get a specific ClientHeader by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientHeader Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Client Header Neu\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientHeaders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientHeaders"
+							]
+						},
+						"description": "Insert a new Clientheader"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientHeader Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 2,\n    \"Name\": \"SBB\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientHeaders/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientHeaders",
+								"2"
+							]
+						},
+						"description": "Update a ClientHeader. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientGroup",
+			"item": [
+				{
+					"name": "ClientGroup Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientGroups",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientGroups"
+							]
+						},
+						"description": "Retrieve all ClientGroups"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientGroup Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientGroups(2)",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientGroups(2)"
+							]
+						},
+						"description": "Get a ClientGroup by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientGroup Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"DPD Basel\",\n    \"HeaderId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientGroups",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientGroups"
+							]
+						},
+						"description": "Insert a new ClientGroup. You can add sub-client-groups by adding the ParentId, this entity is recursive."
+					},
+					"response": []
+				},
+				{
+					"name": "ClientGroup Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 1,\n    \"HeaderId\": 1,\n    \"Name\": \"dasteam Aarau\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientGroups/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientGroups",
+								"1"
+							]
+						},
+						"description": "Update a ClientGroup. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Client Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Clients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Clients"
+							]
+						},
+						"description": "Retrieve all Clients."
+					},
+					"response": []
+				},
+				{
+					"name": "Client Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Clients(1)",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Clients(1)"
+							]
+						},
+						"description": "Get a Client by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Client Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\": \"info@dpd.ch\",\n    \"GroupId\": 2,\n    \"PostalAddress\": {\n        \"PostalName\": \"Harry\",\n        \"PostalStreet\": \"Bäumlimattstrasse 9\",\n        \"PostalZipCode\": \"4313\",\n        \"PostalCity\": \"Möhlin\",\n        \"CountryCodeISO\": \"CH\"\n    },\n    \"Phone\": \"+41 79 123 45 67\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Clients",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Clients"
+							]
+						},
+						"description": "Insert a new Client"
+					},
+					"response": []
+				},
+				{
+					"name": "Client Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 1,\n    \"Email\": \"basel@team.jobs\",\n    \"GroupId\": 2,\n    \"Phone\": \"+41\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Clients/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Clients",
+								"1"
+							]
+						},
+						"description": "Update a Client. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientUser",
+			"item": [
+				{
+					"name": "ClientUser Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUsers"
+							]
+						},
+						"description": "Get all ClientUsers"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUser Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUsers(1)",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUsers(1)"
+							]
+						},
+						"description": "Get a ClientUser by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUser Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApplicationUserId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUsers"
+							]
+						},
+						"description": "Insert a new ClientUser"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUser Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 3,\n    \"ApplicationUserId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUsers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUsers",
+								"1"
+							]
+						},
+						"description": "Update a ClientUser. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientUserSetting",
+			"item": [
+				{
+					"name": "ClientUserSetting Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUserSettings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUserSettings"
+							]
+						},
+						"description": "Get all ClientUserSettings. These are the relation between ClientUser and Client."
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUserSetting Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUserSettings(1)",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUserSettings(1)"
+							]
+						},
+						"description": "Get a ClientUserSetting by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUserSetting Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ClientUserId\": 3,\n    \"ClientId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUserSettings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUserSettings"
+							]
+						},
+						"description": "Insert a new ClientUserSetting (a new relation between ClientUser and Client)"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientUserSetting Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 3,\n    \"ClientUserId\": 3,\n    \"ClientId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientUserSettings/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientUserSettings",
+								"1"
+							]
+						},
+						"description": "Update a ClientUserSetting. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vacancy",
+			"item": [
+				{
+					"name": "Vacancy Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Vacancies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Vacancies"
+							]
+						},
+						"description": "Get all Vacancies the ClientUser or SupplierUser has access to."
+					},
+					"response": []
+				},
+				{
+					"name": "Vacancy Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Vacancies(1)",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Vacancies(1)"
+							]
+						},
+						"description": "Get a Vacancy by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Vacancy Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Slug\": \"Robert sucht noch etwas\",\n    \"ClientId\": 4,\n    \"Description\": \"Einfach mal irgendwas\",\n    \"Title\": \"Alles über 40%\",\n    \"IsActive\": true\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Vacancies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Vacancies"
+							]
+						},
+						"description": "Insert a new Vacancy"
+					},
+					"response": []
+				},
+				{
+					"name": "Vacancy Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 4,\n    \"Slug\": \"Test MBU\",\n    \"ClientId\": 4,\n    \"IsActive\": true,\n    \"Deadline\": null,\n    \"StartDate\": null,\n    \"EndDate\": null,\n    \"Title\": \"Test Vakanz Matthias Burger\",\n    \"Description\": \"Das ist eine Beschreibung für die Vakanz\",\n    \"RequiredAmountEmployees\": 5\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Vacancies/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Vacancies",
+								"1"
+							]
+						},
+						"description": "Update a Vacancy. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Employee Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/Employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Employees"
+							]
+						},
+						"description": "Get all PoolEmployees a Supplier has access to"
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/Employees/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Employees",
+								"2"
+							]
+						},
+						"description": "Get a PoolEmployee by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\": \"Viola\",\n    \"LastName\": \"Salzstreuerin\",\n    \"Email\": \"viola@salzstreuerin.ch\",\n    \"SupplierId\": 1,\n    \"AhvNumber\": \"756.1111.1111.11\",\n    \"Gender\": 1,\n    \"PostalAddress\": {\n        \"PostalName\": \"Viola Salzstreuerin\",\n        \"PostalStreet\": \"Musterstrasse 123\",\n        \"PostalZipCode\": \"4125\",\n        \"PostalCity\": \"Musterstadt\",\n        \"CountryCodeISO\": \"CH\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Employees"
+							]
+						},
+						"description": "Insert a new PoolEmployee"
+					},
+					"response": []
+				},
+				{
+					"name": "Employee Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 1,\n    \"FirstName\": \"Viola\",\n    \"LastName\": \"Salzstreuerin\",\n    \"Email\": \"viola@salzstreuerin.ch\",\n    \"SupplierId\": 1,\n    \"AhvNumber\": \"756.1111.1111.15\",\n    \"Gender\": 1,\n    \"PostalAddress\": {\n        \"PostalName\": \"Viola Salzstreuerin\",\n        \"PostalStreet\": \"Musterstrasse 123\",\n        \"PostalZipCode\": \"4125\",\n        \"PostalCity\": \"Musterstadt\",\n        \"CountryCodeISO\": \"CH\"\n    }\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Employees/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Employees",
+								"1"
+							]
+						},
+						"description": "Update a PoolEmployee. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Order Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						},
+						"description": "Get all PoolEmployees a Supplier has access to"
+					},
+					"response": []
+				},
+				{
+					"name": "Order Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/orders/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"2"
+							]
+						},
+						"description": "Get a PoolEmployee by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Order Select By Employee Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/orders/get-orders-by-employee/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"get-orders-by-employee",
+								"1"
+							]
+						},
+						"description": "Get a PoolEmployee by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Order Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ClientId\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/orders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						},
+						"description": "Insert a new Order"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assignment",
+			"item": [
+				{
+					"name": "Assignment Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/assignments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignments"
+							]
+						},
+						"description": "Get all PoolEmployees a Supplier has access to"
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/assignments/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignments",
+								"2"
+							]
+						},
+						"description": "Get a PoolEmployee by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"OrderId\": 1,\n    \"EmployeeId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/assignments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignments"
+							]
+						},
+						"description": "Insert a new assignment"
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 1,\n    \"OrderId\": 1,\n    \"EmployeeId\": 3,\n    \"CostCenter\": \"2.5\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/assignments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assignments"
+							]
+						},
+						"description": "Update an existing assignment"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PoolEmployee",
+			"item": [
+				{
+					"name": "PoolEmployee Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployees"
+							]
+						},
+						"description": "Get all PoolEmployees a Supplier has access to"
+					},
+					"response": []
+				},
+				{
+					"name": "PoolEmployee Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployees/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployees",
+								"2"
+							]
+						},
+						"description": "Get a PoolEmployee by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "PoolEmployee Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\": \"Viola\",\n    \"LastName\": \"Salzstreuerin\",\n    \"Email\": \"viola@salzstreuerin.ch\",\n    \"SupplierId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployees"
+							]
+						},
+						"description": "Insert a new PoolEmployee"
+					},
+					"response": []
+				},
+				{
+					"name": "PoolEmployee Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 1,\n    \"FirstName\": \"Viola\",\n    \"LastName\": \"Salzstreuerin\",\n    \"Email\": \"viola@salzstreuerin.ch\",\n    \"SupplierId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployees/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployees",
+								"1"
+							]
+						},
+						"description": "Update a PoolEmployee. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PoolEmployeeDocument",
+			"item": [
+				{
+					"name": "PoolEmployeeDocument Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "poolEmployeeId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"type": "file",
+									"src": "/C:/Users/Raphael Beck/Documents/lorem-ipsum-4096w.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployeeDocuments/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployeeDocuments",
+								"upload"
+							]
+						},
+						"description": "Upload a new document for a PoolEmployee"
+					},
+					"response": []
+				},
+				{
+					"name": "PoolEmployeeDocument Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployeeDocuments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployeeDocuments",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Select a PoolEmployees document by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "PoolEmployeeDocument Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/PoolEmployeeDocuments?poolEmployeeId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"PoolEmployeeDocuments"
+							],
+							"query": [
+								{
+									"key": "poolEmployeeId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get all PoolEmployee-Documents. Use the filter to retrieve only documents for a specific employee"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EmployeeDocument",
+			"item": [
+				{
+					"name": "EmployeeDocument Upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "employeeId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "document",
+									"type": "file",
+									"src": "/C:/Users/Raphael Beck/Documents/lorem-ipsum-4096w.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/EmployeeDocuments/upload",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"EmployeeDocuments",
+								"upload"
+							]
+						},
+						"description": "Upload a new document for a PoolEmployee"
+					},
+					"response": []
+				},
+				{
+					"name": "EmployeeDocument Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/EmployeeDocuments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"EmployeeDocuments",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Select a PoolEmployees document by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "EmployeeDocument Select All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/EmployeeDocuments?employeeId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"EmployeeDocuments"
+							],
+							"query": [
+								{
+									"key": "employeeId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Get all PoolEmployee-Documents. Use the filter to retrieve only documents for a specific employee"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProposalDocument",
+			"item": [
+				{
+					"name": "ProposalDocument Select Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/ProposalDocuments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ProposalDocuments",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Select a PoolEmployees document by its Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proposal",
+			"item": [
+				{
+					"name": "Proposal Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vacancyId",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "poolEmployeeId",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "\"good\" employee, \"very\" reliable, 1/10\n",
+									"type": "text"
+								},
+								{
+									"key": "proposalDocuments",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								},
+								{
+									"key": "poolEmployeeDocumentIds[0]",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "poolEmployeeDocumentIds[1]",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/proposals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"proposals"
+							]
+						},
+						"description": "This method is used by a supplier, that proposes a PoolEmployee for a Vacancy"
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Accept",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProposalIds\":[1,2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/proposals/accept",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"proposals",
+								"accept"
+							]
+						},
+						"description": "This method is used by a supplier, that proposes a PoolEmployee for a Vacancy"
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Reject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProposalIds\":[1,2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/proposals/reject",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"proposals",
+								"reject"
+							]
+						},
+						"description": "This method is used by a supplier, that proposes a PoolEmployee for a Vacancy"
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal GetProposalsOfSupplier",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Proposals",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Proposals"
+							]
+						},
+						"description": "This method is used by a Supplier to see which PoolEmployees he already proposed.\n\noptional parameters are `clientId` to get all proposals for all clients vacancies, or `vacancyId` to get all proposals for a vacancy\n\nBeta: The result will get shrinked."
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Client GetProposalsOfVacancy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Proposals/get-proposals-of-vacancy/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Proposals",
+								"get-proposals-of-vacancy",
+								"4"
+							]
+						},
+						"description": "This method is used by ClientUsers to see which Employees are proposed for a vacancy.\n\nBeta: The result will get shrinked."
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Client GetProposalsOfEmployee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Proposals/get-proposals-of-vacancy/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Proposals",
+								"get-proposals-of-vacancy",
+								"4"
+							]
+						},
+						"description": "This method is used by ClientUsers to see which Employees are proposed for a vacancy.\n\nBeta: The result will get shrinked."
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Client GetProposalsOfPoolEmployee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Proposals/get-proposals-of-vacancy/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Proposals",
+								"get-proposals-of-vacancy",
+								"4"
+							]
+						},
+						"description": "This method is used by ClientUsers to see which Employees are proposed for a vacancy.\n\nBeta: The result will get shrinked."
+					},
+					"response": []
+				},
+				{
+					"name": "Proposal Client GetProposalsOfClient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Proposals/get-proposals-of-vacancy/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Proposals",
+								"get-proposals-of-vacancy",
+								"4"
+							]
+						},
+						"description": "This method is used by ClientUsers to see which Employees are proposed for a vacancy.\n\nBeta: The result will get shrinked."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientSupplier",
+			"item": [
+				{
+					"name": "ClientSupplier Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientSuppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientSuppliers"
+							]
+						},
+						"description": "Get all ClientSupplier-realtions"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientSupplier Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientSuppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientSuppliers"
+							]
+						},
+						"description": "Get a ClientSupplier-relation by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientSupplier Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ClientId\": 4,\n    \"SupplierId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientSuppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientSuppliers"
+							]
+						},
+						"description": "Insert a new ClientSupplier-relation"
+					},
+					"response": []
+				},
+				{
+					"name": "ClientSupplier Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ClientId\": 4,\n    \"SupplierId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/ClientSuppliers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ClientSuppliers",
+								"1"
+							]
+						},
+						"description": "Update a ClientSupplier-relation. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupplierHeader",
+			"item": [
+				{
+					"name": "SupplierHeader Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierHeaders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierHeaders"
+							]
+						},
+						"description": "Get all SupplierHeaders. This is the top-level for suppliers."
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierHeader Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierHeaders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierHeaders",
+								"1"
+							]
+						},
+						"description": "Get a SupplierHeader by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierHeader Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Peter Perosnal Consulting\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierHeaders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierHeaders"
+							]
+						},
+						"description": "Insert a new SupplierHeader"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierHeader Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Peter Perosnal Consulting\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierHeaders/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierHeaders",
+								"1"
+							]
+						},
+						"description": "Update a SupplierHeader. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Supplier Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Suppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Suppliers"
+							]
+						},
+						"description": "Get all Suppliers"
+					},
+					"response": []
+				},
+				{
+					"name": "Supplier Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Suppliers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Suppliers",
+								"1"
+							]
+						},
+						"description": "Get a Supplier by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Supplier Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\": \"peter@supplier.de\",\n    \"HeaderId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Suppliers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Suppliers"
+							]
+						},
+						"description": "Insert a new Supplier"
+					},
+					"response": []
+				},
+				{
+					"name": "Supplier Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"@odata.context\": \"http://localhost:8000/api/v1/$metadata#Supplier/$entity\",\n    \"Id\": 3,\n    \"Email\": \"Peters Supplier\",\n    \"Phone\": \"0041\",\n    \"Fax\": null,\n    \"HeaderId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/Suppliers/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Suppliers",
+								"3"
+							]
+						},
+						"description": "Update a Supplier. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupplierUser",
+			"item": [
+				{
+					"name": "SupplierUser Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUsers"
+							]
+						},
+						"description": "Get all SupplierUsers"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUser Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUsers/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUsers",
+								"2"
+							]
+						},
+						"description": "Get a SupplierUser by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUser Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ApplicationUserId\": 5\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUsers"
+							]
+						},
+						"description": "Insert a new SupplierUser"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUser Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 2,\n    \"ApplicationUserId\": 5\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUsers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUsers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TimeRecord",
+			"item": [
+				{
+					"name": "TimeRecord Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/TimeRecords",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"TimeRecords"
+							]
+						},
+						"description": "Get all SupplierUsers"
+					},
+					"response": []
+				},
+				{
+					"name": "TimeRecord Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/TimeRecords/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"TimeRecords",
+								"2"
+							]
+						},
+						"description": "Get a SupplierUser by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "TimeRecord Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AssignmentId\":1,\n    \"ClientUserId\":1,\n    \"ExportedBy\":null,\n    \"WageType\": \"20000\",\n    \"CostCenter\": \"\",\n    \"Amount\": 32.64,\n    \"AmountWageFixed\": null,\n    \"AmountTariffFixed\": null,\n    \"AmountClient\": null,\n    \"ShiftId\": 5,\n    \"MaxHourEntry\": false,\n    \"CandidateId\": null,\n    \"ReportDocumentId\": null\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/TimeRecords",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"TimeRecords"
+							]
+						},
+						"description": "Insert a new SupplierUser"
+					},
+					"response": []
+				},
+				{
+					"name": "TimeRecord Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AssignmentId\":1,\n    \"ClientUserId\":1,\n    \"ExportedBy\":null,\n    \"WageType\": \"20000-modified\",\n    \"CostCenter\": \"\",\n    \"Amount\": 42.10,\n    \"AmountWageFixed\": null,\n    \"AmountTariffFixed\": null,\n    \"AmountClient\": null,\n    \"ShiftId\": 4,\n    \"MaxHourEntry\": false,\n    \"CandidateId\": null,\n    \"ReportDocumentId\": null\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/TimeRecords/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"TimeRecords",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupplierUserSetting",
+			"item": [
+				{
+					"name": "SupplierUserSetting Select All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUserSettings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUserSettings"
+							]
+						},
+						"description": "Get all SupplierUserSettings. These are the relation between SupplierUser and Supplier"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUserSetting Select Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUserSettings/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUserSettings",
+								"1"
+							]
+						},
+						"description": "Get a SupplierUserSetting by its Id"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUserSetting Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"SupplierId\": 3,\n    \"SupplierUserId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUserSettings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUserSettings"
+							]
+						},
+						"description": "Insert a new SupplierUserSetting (a new relation between SupplierUser and Supplier)"
+					},
+					"response": []
+				},
+				{
+					"name": "SupplierUserSetting Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 2,\n    \"SupplierId\": 3,\n    \"SupplierUserId\": 2\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/SupplierUserSettings/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"SupplierUserSettings",
+								"1"
+							]
+						},
+						"description": "Update a SupplierUserSetting. Enter all properties (also enter the properties you don't change, otherwise you meight get an exception or you change data to null/0)."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VacancyState",
+			"item": [
+				{
+					"name": "VacancyState List Types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/vacancystates",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vacancystates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProposalState",
+			"item": [
+				{
+					"name": "ProposalState List Types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{{{token}}}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/proposalstates",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"proposalstates"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JobProfile",
+			"item": [
+				{
+					"name": "JobProfile Select All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/JobProfiles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"JobProfiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JobProfile Select Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/JobProfiles/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"JobProfiles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JobProfile Insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ClientSupplierId\": 1,\r\n    \"Title\":\"Ph.D. Doktortitel theoretische Physik\",\r\n    \"Factor\": 1.75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/JobProfiles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"JobProfiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JobProfile Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ClientSupplierId\": 1,\r\n    \"Title\":\"Ph.D. Doktortitel theoretische Physik\",\r\n    \"Factor\": 1.75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/JobProfiles/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"JobProfiles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		},
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
