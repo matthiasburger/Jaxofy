@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.Supplier
+namespace Jaxofy.Models.Dto.Supplier
 {
     public class SlimmedSupplierResponseDto
     {

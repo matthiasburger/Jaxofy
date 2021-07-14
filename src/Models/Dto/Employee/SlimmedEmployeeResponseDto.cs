@@ -1,6 +1,6 @@
-using DasTeamRevolution.Models.Dto.PostalAddress;
+using Jaxofy.Models.Dto.PostalAddress;
 
-namespace DasTeamRevolution.Models.Dto.Employee
+namespace Jaxofy.Models.Dto.Employee
 {
     public class SlimmedEmployeeResponseDto
     {

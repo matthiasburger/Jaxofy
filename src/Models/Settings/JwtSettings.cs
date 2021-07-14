@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Settings
+﻿namespace Jaxofy.Models.Settings
 {
     /// <summary>
     /// Settings class for authentication token validation and emission.

@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.JobProfile
+namespace Jaxofy.Models.Dto.JobProfile
 {
     public class JobProfileResponseDto
     {

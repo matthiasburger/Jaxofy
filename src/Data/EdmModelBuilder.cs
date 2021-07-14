@@ -1,9 +1,9 @@
-﻿using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Dto.ApplicationUser;
+﻿using Jaxofy.Data.Models;
+using Jaxofy.Models.Dto.ApplicationUser;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
 
-namespace DasTeamRevolution.Data
+namespace Jaxofy.Data
 {
     internal static class EdmModelBuilder
     {

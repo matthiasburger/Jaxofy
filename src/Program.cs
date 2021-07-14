@@ -1,11 +1,11 @@
 using System;
-using Serilog;
+using Jaxofy.Services.Configuration;
+using Jaxofy.Services.Environment;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using DasTeamRevolution.Services.Environment;
-using DasTeamRevolution.Services.Configuration;
+using Serilog;
 
-namespace DasTeamRevolution
+namespace Jaxofy
 {
     /// <summary>
     /// Backend application entry point.
@@ -24,13 +24,13 @@ namespace DasTeamRevolution
 
             try
             {
-                Log.Information($"Starting {nameof(DasTeamRevolution)} web host...");
+                Log.Information($"Starting {nameof(Jaxofy)} web host...");
                 CreateHostBuilder(args).Build().Run();
                 return 0;
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, $"{nameof(DasTeamRevolution)} host terminated unexpectedly!");
+                Log.Fatal(ex, $"{nameof(Jaxofy)} host terminated unexpectedly!");
                 return 1;
             }
             finally

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Dto.TimeRecord;
-using DasTeamRevolution.Models.Enums;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Dto.TimeRecord;
+using Jaxofy.Models.Enums;
 
-namespace DasTeamRevolution.Models.Dto.TimeRecordStateHistory
+namespace Jaxofy.Models.Dto.TimeRecordStateHistory
 {
     public class TimeRecordStateHistoryResponseDto
     {

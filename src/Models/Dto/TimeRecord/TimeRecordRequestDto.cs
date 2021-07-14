@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Dto.TimeRecord
+﻿namespace Jaxofy.Models.Dto.TimeRecord
 {
     public class TimeRecordRequestDto
     {

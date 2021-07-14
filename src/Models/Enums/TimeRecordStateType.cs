@@ -1,6 +1,4 @@
-﻿using DasTeamRevolution.Data.Models;
-
-namespace DasTeamRevolution.Models.Enums
+﻿namespace Jaxofy.Models.Enums
 {
     /// <summary>
     /// The type of state a <see cref="TimeRecord"/> can be in.

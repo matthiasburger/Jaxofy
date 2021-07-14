@@ -1,6 +1,6 @@
-﻿using DasTeamRevolution.Models.Dto.PostalAddress;
+﻿using Jaxofy.Models.Dto.PostalAddress;
 
-namespace DasTeamRevolution.Models.Dto.Client
+namespace Jaxofy.Models.Dto.Client
 {
     public class ClientRequestDto
     {

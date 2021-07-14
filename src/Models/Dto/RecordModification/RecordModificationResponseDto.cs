@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DasTeamRevolution.Models.Dto.RecordModification
+namespace Jaxofy.Models.Dto.RecordModification
 {
     public class RecordModificationResponseDto
     {

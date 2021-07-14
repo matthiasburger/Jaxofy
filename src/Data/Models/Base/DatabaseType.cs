@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Data.Models.Base
+namespace Jaxofy.Data.Models.Base
 {
     /// <summary>
     /// String constants for various database types (specific to SQL Server).

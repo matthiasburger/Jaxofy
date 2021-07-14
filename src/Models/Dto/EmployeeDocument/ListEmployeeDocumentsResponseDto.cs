@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DasTeamRevolution.Models.Dto.EmployeeDocument
+namespace Jaxofy.Models.Dto.EmployeeDocument
 {
     /// <summary>
     /// List of documents (their id + tuples) response DTO.

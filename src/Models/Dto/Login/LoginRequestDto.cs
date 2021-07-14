@@ -1,6 +1,6 @@
-﻿using DasTeamRevolution.Data.Models;
+﻿using Jaxofy.Data.Models;
 
-namespace DasTeamRevolution.Models.Dto.Login
+namespace Jaxofy.Models.Dto.Login
 {
     /// <summary>
     /// Request DTO for the user login endpoint.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DasTeamRevolution.Models.Dto.Proposal
+namespace Jaxofy.Models.Dto.Proposal
 {
     /// <summary>
     /// Proposal PUT endpoint request DTO for accepting one or more proposals.

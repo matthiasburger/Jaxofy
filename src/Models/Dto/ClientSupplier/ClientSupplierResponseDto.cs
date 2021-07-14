@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.ClientSupplier
+namespace Jaxofy.Models.Dto.ClientSupplier
 {
     public class ClientSupplierResponseDto
     {

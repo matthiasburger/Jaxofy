@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.Document
+namespace Jaxofy.Models.Dto.Document
 {
     public class DocumentUploadDto
     {

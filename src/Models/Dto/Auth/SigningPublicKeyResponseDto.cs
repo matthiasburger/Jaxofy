@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.Auth
+namespace Jaxofy.Models.Dto.Auth
 {
     /// <summary>
     /// Response body DTO for the public key GET endpoint.

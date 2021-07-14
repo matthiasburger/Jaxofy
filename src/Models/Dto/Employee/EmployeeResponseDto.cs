@@ -1,11 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using DasTeamRevolution.Controllers;
-using DasTeamRevolution.Models.Dto.PostalAddress;
-using DasTeamRevolution.Models.Dto.Supplier;
-using DasTeamRevolution.Models.Enums;
+using Jaxofy.Models.Dto.PostalAddress;
+using Jaxofy.Models.Dto.Supplier;
+using Jaxofy.Models.Enums;
 
-namespace DasTeamRevolution.Models.Dto.Employee
+namespace Jaxofy.Models.Dto.Employee
 {
     /// <summary>
     /// DTO for the GET employee endpoint inside <see cref="EmployeesController"/>.

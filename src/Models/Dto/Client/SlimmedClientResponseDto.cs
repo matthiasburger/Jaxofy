@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.Client
+namespace Jaxofy.Models.Dto.Client
 {
     public class SlimmedClientResponseDto
     {

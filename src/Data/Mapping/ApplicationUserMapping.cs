@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
+using Jaxofy.Data.Models;
+using Jaxofy.Models.Dto.ApplicationUser;
 
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Dto.ApplicationUser;
-
-namespace DasTeamRevolution.Data.Mapping
+namespace Jaxofy.Data.Mapping
 {
     public class ApplicationUserMapping : Profile
     {

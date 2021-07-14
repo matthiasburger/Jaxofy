@@ -5,17 +5,17 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using DasTeamRevolution.Data;
-using DasTeamRevolution.Extensions;
-using DasTeamRevolution.Models.Settings;
 using IronSphere.Extensions;
+using Jaxofy.Data;
+using Jaxofy.Extensions;
+using Jaxofy.Models.Settings;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DasTeamRevolution.Services.AuthTokenService
+namespace Jaxofy.Services.AuthTokenService
 {
     /// <summary>
     /// Auth token emission service. Use this to generate JWTs for your users!

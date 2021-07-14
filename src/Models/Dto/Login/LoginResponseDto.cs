@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Dto.Login
+﻿namespace Jaxofy.Models.Dto.Login
 {
     /// <summary>
     /// Response body DTO for successful login requests.

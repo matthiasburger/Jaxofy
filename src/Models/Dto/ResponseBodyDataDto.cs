@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DasTeamRevolution.Models.Dto
+namespace Jaxofy.Models.Dto
 {
     /// <summary>
     /// Data payload to return in an API response body.

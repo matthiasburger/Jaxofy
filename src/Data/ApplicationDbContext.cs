@@ -1,16 +1,16 @@
 using System;
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.Configuration;
-using DasTeamRevolution.Services.Environment;
-using DasTeamRevolution.Services.PasswordHashing;
+using Jaxofy.Data.Models;
+using Jaxofy.Models.Settings;
+using Jaxofy.Services.Configuration;
+using Jaxofy.Services.Environment;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace DasTeamRevolution.Data
+namespace Jaxofy.Data
 {
     /// <summary>
     /// This is an <see cref="ApplicationDbContext"/> factory class specifically for EF Core to use during execution of the <c>ef</c> CLI commands.<para> </para>

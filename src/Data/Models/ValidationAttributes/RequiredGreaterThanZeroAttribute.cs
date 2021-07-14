@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DasTeamRevolution.Data.Models.ValidationAttributes
+namespace Jaxofy.Data.Models.ValidationAttributes
 {
     public class RequiredGreaterThanZeroAttribute : ValidationAttribute
     {

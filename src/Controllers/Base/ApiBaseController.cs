@@ -1,11 +1,11 @@
 using System;
-using System.Net;
 using System.Collections.Generic;
-using DasTeamRevolution.Models;
-using DasTeamRevolution.Models.Dto;
+using System.Net;
+using Jaxofy.Models;
+using Jaxofy.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DasTeamRevolution.Controllers.Base
+namespace Jaxofy.Controllers.Base
 {
     public class ApiBaseController : ControllerBase
     {

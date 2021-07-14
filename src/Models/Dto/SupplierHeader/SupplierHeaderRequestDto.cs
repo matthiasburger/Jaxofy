@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.SupplierHeader
+namespace Jaxofy.Models.Dto.SupplierHeader
 {
     public class SupplierHeaderRequestDto
     {

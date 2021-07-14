@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using DasTeamRevolution.Data.Models.Base;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Jaxofy.Data.Models.Base;
 
-namespace DasTeamRevolution.Extensions
+namespace Jaxofy.Extensions
 {
     public static class RecursiveEntityExtension
     {

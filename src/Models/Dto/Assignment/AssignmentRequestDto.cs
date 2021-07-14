@@ -1,6 +1,6 @@
 using System;
 
-namespace DasTeamRevolution.Models.Dto.Assignment
+namespace Jaxofy.Models.Dto.Assignment
 {
     public class AssignmentRequestDto
     {

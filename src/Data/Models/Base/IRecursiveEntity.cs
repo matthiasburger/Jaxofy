@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DasTeamRevolution.Data.Models.Base
+namespace Jaxofy.Data.Models.Base
 {
     /// <summary>
     ///  It's an entity that is suitable for representing tree-type data structures.

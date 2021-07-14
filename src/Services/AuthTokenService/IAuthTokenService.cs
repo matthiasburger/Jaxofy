@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using DasTeamRevolution.Data.Models;
+using Jaxofy.Data.Models;
 using Microsoft.AspNetCore.Http;
 
-namespace DasTeamRevolution.Services.AuthTokenService
+namespace Jaxofy.Services.AuthTokenService
 {
     /// <summary>
     /// Auth token service interface for emitting tokens, querying against them, etc...

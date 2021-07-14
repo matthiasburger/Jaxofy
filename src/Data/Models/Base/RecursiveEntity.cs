@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace DasTeamRevolution.Data.Models.Base
+namespace Jaxofy.Data.Models.Base
 {
     public abstract class RecursiveEntity<TEntity, TKey> : IEntity<TKey>, IRecursiveEntity<TEntity, TKey>
         where TEntity : RecursiveEntity<TEntity, TKey>

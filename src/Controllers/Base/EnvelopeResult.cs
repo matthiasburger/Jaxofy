@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using DasTeamRevolution.Models.Dto;
-
+using Jaxofy.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Abstracts;
 using Microsoft.AspNetCore.OData.Extensions;
 
-namespace DasTeamRevolution.Controllers.Base
+namespace Jaxofy.Controllers.Base
 {
     public class EnvelopeResult
     {

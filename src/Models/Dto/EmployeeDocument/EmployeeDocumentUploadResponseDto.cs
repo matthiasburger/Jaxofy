@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Dto.EmployeeDocument
+﻿namespace Jaxofy.Models.Dto.EmployeeDocument
 {
     /// <summary>
     /// Response body DTO for successful document uploads.

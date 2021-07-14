@@ -1,8 +1,8 @@
 ﻿using System;
-using DasTeamRevolution.Models.Dto.Client;
-using DasTeamRevolution.Models.Dto.Employee;
+using Jaxofy.Models.Dto.Client;
+using Jaxofy.Models.Dto.Employee;
 
-namespace DasTeamRevolution.Models.Dto.Assignment
+namespace Jaxofy.Models.Dto.Assignment
 {
     public class AssignmentResponseDto
     {

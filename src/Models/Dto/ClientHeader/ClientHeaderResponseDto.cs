@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Dto.ClientHeader
+﻿namespace Jaxofy.Models.Dto.ClientHeader
 {
     public class ClientHeaderResponseDto
     {

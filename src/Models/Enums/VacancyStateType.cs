@@ -1,6 +1,4 @@
-﻿using DasTeamRevolution.Data.Models;
-
-namespace DasTeamRevolution.Models.Enums
+﻿namespace Jaxofy.Models.Enums
 {
     /// <summary>
     /// The various states a <see cref="Vacancy"/> can be in.

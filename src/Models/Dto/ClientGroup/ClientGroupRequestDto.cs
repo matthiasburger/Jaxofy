@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.ClientGroup
+namespace Jaxofy.Models.Dto.ClientGroup
 {
     public class ClientGroupRequestDto
     {

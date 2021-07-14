@@ -1,6 +1,6 @@
 using System;
 
-namespace DasTeamRevolution.Extensions
+namespace Jaxofy.Extensions
 {
     /// <summary>
     /// Extension methods for <see cref="string"/>.
