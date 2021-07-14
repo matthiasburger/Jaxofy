@@ -12,6 +12,7 @@ using Jaxofy.Models.Dto;
 using Jaxofy.Models.Settings;
 using Jaxofy.Services.AuthTokenService;
 using Jaxofy.Services.Environment;
+using Jaxofy.Services.HttpEncoder;
 using Jaxofy.Services.Login;
 using Jaxofy.Services.PasswordHashing;
 using Jaxofy.Services.TrackService;

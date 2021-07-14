@@ -19,6 +19,7 @@
         <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" Version="4.1.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
         <PackageReference Include="GlitchedPolygons.ExtensionMethods" Version="1.0.8" />
+        <PackageReference Include="ID3" Version="0.6.0" />
         <PackageReference Include="IronSphere.Extensions" Version="20.8.0" />
         <PackageReference Include="Konscious.Security.Cryptography.Argon2" Version="1.2.1" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.5" />
@@ -44,5 +45,6 @@
     <ItemGroup>
       <Folder Include="Logs" />
       <Folder Include="Migrations" />
+      <Folder Include="Models\Enums" />
     </ItemGroup>
 </Project>
