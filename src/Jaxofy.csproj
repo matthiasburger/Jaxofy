@@ -39,12 +39,10 @@
         <Content Remove="$(SpaRoot)**" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-        <None Update="Data\DemoSql\demodata.sql">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Logs" />
+      <Folder Include="Migrations" />
     </ItemGroup>
 </Project>

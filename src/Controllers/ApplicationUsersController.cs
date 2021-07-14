@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,12 +8,11 @@ using DasTeamRevolution.Controllers.Base;
 using DasTeamRevolution.Data;
 using DasTeamRevolution.Data.Models;
 using DasTeamRevolution.Models.Dto.ApplicationUser;
-using DasTeamRevolution.Models.Filters;
-using DasTeamRevolution.Services.Environment;
 using DasTeamRevolution.Services.PasswordHashing;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
@@ -26,39 +24,22 @@ namespace DasTeamRevolution.Controllers
     {
         private readonly ApplicationDbContext _db;
         private readonly IPasswordHashing _passwordHashing;
-        private readonly IEnvironmentDiscovery _environmentDiscovery;
         private readonly IMapper _mapper;
 
-        public ApplicationUsersController(ApplicationDbContext db, IEnvironmentDiscovery environmentDiscovery,
+        public ApplicationUsersController(ApplicationDbContext db,
             IPasswordHashing passwordHashing, IMapper mapper)
         {
             _db = db;
             _passwordHashing = passwordHashing;
-            _environmentDiscovery = environmentDiscovery;
             _mapper = mapper;
         }
 
         [HttpGet]
         [Route("")]
-        public async Task<IActionResult> GetAll([FromQuery] PaginationFilter paginationFilter)
+        public IActionResult GetAll(ODataQueryOptions<ApplicationUser> query)
         {
-            paginationFilter.Clamp();
-
-            IOrderedQueryable<ApplicationUser> query = _db.ApplicationUsers
-                .AsNoTracking()
-                .OrderByDescending(user => user.CreatedOn)
-                .ThenBy(user => user.LastName);
-
-            long totalItemCount = await query.LongCountAsync();
-
-            List<ApplicationUser> users = await query
-                .Skip(paginationFilter.PageSize * (paginationFilter.Page - 1))
-                .Take(paginationFilter.PageSize)
-                .ToListAsync();
-
-            List<ApplicationUserResponseDto> userResponseDto = _mapper.Map<List<ApplicationUserResponseDto>>(users);
-
-            return Ok(totalItemCount, userResponseDto);
+            IQueryable applicationUsers = query.ApplyTo(_db.ApplicationUsers);
+            return Ok(applicationUsers);
         }
 
         [HttpGet]
@@ -79,14 +60,10 @@ namespace DasTeamRevolution.Controllers
             return Ok(1, new[] {userResponseDto});
         }
 
+        // todo: change this to register
         [HttpPost, Route("create-dev"), AllowAnonymous]
         public async Task<IActionResult> CreateUser(string email, string password, string firstName, string lastName)
         {
-            /*if (!_environmentDiscovery.IsTestEnvironment)
-            {
-                return Forbidden();
-            }*/
-
             if (await _db.ApplicationUsers.AsNoTracking().AnyAsync(u => u.Email == email))
             {
                 return Error(400, Constants.Errors.UserAlreadyExists);

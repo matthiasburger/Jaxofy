@@ -7,18 +7,18 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace DasTeamRevolution.Migrations
+namespace Jaxofy.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210331070821_ModifyColumnTypeUserChangePassword")]
-    partial class ModifyColumnTypeUserChangePassword
+    [Migration("20210714094551_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.4")
+                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("DasTeamRevolution.Data.Models.ApplicationUser", b =>
@@ -38,7 +38,7 @@ namespace DasTeamRevolution.Migrations
                         .HasColumnName("CreatedOn");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("Email");
 
                     b.Property<string>("FirstName")
@@ -66,6 +66,10 @@ namespace DasTeamRevolution.Migrations
                         .HasColumnName("Password");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
 
                     b.ToTable("ApplicationUser");
                 });

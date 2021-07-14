@@ -23,7 +23,7 @@ namespace DasTeamRevolution.Data
 
         public void SeedData()
         {
-            if (_db.ApplicationUsers.Any() || _db.Clients.Any() || _db.Suppliers.Any())
+            if (_db.ApplicationUsers.Any())
             {
                return;
             }

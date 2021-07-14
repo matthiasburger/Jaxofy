@@ -12,13 +12,13 @@ namespace DasTeamRevolution
     /// </summary>
     public static class Program
     {
-        private static readonly IEnvironmentDiscovery _environmentDiscovery = new EnvironmentDiscovery();
-        private static readonly IConfigurationService _configurationService = new ConfigurationService();
+        private static readonly IEnvironmentDiscovery EnvironmentDiscovery = new EnvironmentDiscovery();
+        private static readonly IConfigurationService ConfigurationService = new ConfigurationService();
 
         public static int Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                .ReadFrom.Configuration(_configurationService.GetPlatformAgnosticConfig(args))
+                .ReadFrom.Configuration(ConfigurationService.GetPlatformAgnosticConfig(args))
                 .Enrich.FromLogContext()
                 .CreateLogger();
 
@@ -41,15 +41,15 @@ namespace DasTeamRevolution
 
         private static IWebHostBuilder CreateHostBuilder(string[] args)
         {
-            if (_environmentDiscovery.IsDocker)
+            if (EnvironmentDiscovery.IsDocker)
             {
                 Console.WriteLine("Running inside Docker");
             }
 
             return WebHost
                 .CreateDefaultBuilder(args)
-                .UseConfiguration(_configurationService.GetPlatformAgnosticConfig(args))
-                .UseUrls(_environmentDiscovery.IsDocker ? "http://*:80" : "http://localhost:8000")
+                .UseConfiguration(ConfigurationService.GetPlatformAgnosticConfig(args))
+                .UseUrls(EnvironmentDiscovery.IsDocker ? "http://*:80" : "http://localhost:8000")
                 .UseStartup<Startup>()
                 .UseSerilog();
         }

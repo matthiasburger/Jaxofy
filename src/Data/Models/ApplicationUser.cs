@@ -76,17 +76,5 @@ namespace DasTeamRevolution.Data.Models
         /// </summary>
         [Column("NewPasswordRequiredOn", Order = 9, TypeName = DatabaseType.Date)]
         public DateTime? NewPasswordRequiredOn { get; set; }
-
-        /// <summary>
-        /// If this is <c>null</c>, the user is a <see cref="SupplierUser"/>.
-        /// </summary>
-        [Column("ClientUser", Order = 10)]
-        public ClientUser ClientUser { get; set; }
-
-        /// <summary>
-        /// If this is <c>null</c>, the user is a <see cref="ClientUser"/>.
-        /// </summary>
-        [Column("SupplierUser", Order = 11)]
-        public SupplierUser SupplierUser { get; set; }
     }
 }
