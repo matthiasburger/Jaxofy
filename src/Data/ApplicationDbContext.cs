@@ -45,6 +45,7 @@ namespace Jaxofy.Data
     public class ApplicationDbContext : DbContext
     {
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Track> Tracks { get; set; }
         
         private readonly ILoggerFactory _loggerFactory;
         private readonly IEnvironmentDiscovery _environmentDiscovery;

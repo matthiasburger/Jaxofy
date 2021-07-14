@@ -9,84 +9,62 @@ using Jaxofy.Controllers.Base;
 using Jaxofy.Data;
 using Jaxofy.Data.Models;
 using Jaxofy.Extensions;
+using Jaxofy.Services.HttpEncoder;
 using Jaxofy.Services.TrackService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyModel;
 
 namespace Jaxofy.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class PlayController :ApiBaseController
+    public class PlayController : ApiBaseController
     {
         private readonly ApplicationDbContext _databaseContext;
         private readonly ITrackService _trackService;
         private readonly IHttpEncoder _httpEncoder;
-        
-        public PlayController(ApplicationDbContext context, ITrackService trackService, IHttpEncoder httpEncoder)
+        private readonly IConfiguration _configuration;
+
+        public PlayController(ApplicationDbContext context, ITrackService trackService, IHttpEncoder httpEncoder,
+            IConfiguration configuration)
         {
             _databaseContext = context;
             _trackService = trackService;
             _httpEncoder = httpEncoder;
+            _configuration = configuration;
         }
-        
-        [HttpGet("track/{userId}/{trackPlayToken}/{id}.{mp3?}")]
-        [AllowAnonymous]
-        public async Task<IActionResult> StreamTrack(Guid id)
-        {
-            ApplicationUser user = await _databaseContext.ApplicationUsers.FindAsync(User.Identity?.Name); 
-            
-            return await StreamTrack(id, user).ConfigureAwait(false);
-        }
-        
-        [HttpGet(), Route("")]
+
+        [HttpGet, Route("")]
         [AllowAnonymous]
         public async Task<IActionResult> StreamTrack()
         {
-            ApplicationUser user = await _databaseContext.ApplicationUsers.FindAsync(User.Identity?.Name); 
-            
-            return await StreamTrack(Guid.NewGuid(), user).ConfigureAwait(false);
+            return await StreamTrack(Guid.NewGuid()).ConfigureAwait(false);
         }
         
+        
+
+        [HttpGet, Route("{trackGuid}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> StreamTrack(Guid trackGuid)
+        {
+            return await StreamTrack(trackGuid, null).ConfigureAwait(false);
+        }
+
         [NonAction]
         protected async Task<IActionResult> StreamTrack(Guid id, ApplicationUser currentUser = null)
         {
-            var sw = Stopwatch.StartNew();
-            var timings = new Dictionary<string, long>();
-            var tsw = new Stopwatch();
-
-            tsw.Restart();
             var user = currentUser;
             OperationResult<Track> track = _trackService.StreamCheckAndInfo(user, id);
-            if (track == null || (track?.IsNotFoundResult ?? false))
-            {
-                if (track?.Errors != null && (track?.Errors.Any() ?? false))
-                {
-                    Console.WriteLine($"StreamTrack: ById Invalid For TrackId [{id}] OperationResult Errors [{string.Join('|', track?.Errors ?? new Exception[0])}], For User [{currentUser}]");
-                }
-                else
-                {
-                    Console.WriteLine($"StreamTrack: ById Invalid For TrackId [{id}] OperationResult Messages [{string.Join('|', track?.Messages ?? new string[0])}], For User [{currentUser}]");
-                }
-                return NotFound("Unknown TrackId");
-            }
-
-            tsw.Stop();
-            timings.Add("TrackService.StreamCheckAndInfo", tsw.ElapsedMilliseconds);
-            tsw.Restart();
-
+            
             var info = await _trackService.TrackStreamInfoAsync(id,
                 _trackService.DetermineByteStartFromHeaders(Request.Headers),
-                _trackService.DetermineByteEndFromHeaders(Request.Headers, track.Data.FileSize),
+                _trackService.DetermineByteEndFromHeaders(Request.Headers, track.Data.GetFileSize(_configuration)),
                 user).ConfigureAwait(false);
 
-            tsw.Stop();
-            timings.Add("TrackStreamInfo", tsw.ElapsedMilliseconds);
-
-            tsw.Restart();
             Response.Headers.Add("Content-Disposition", info.Data.ContentDisposition);
             Response.Headers.Add("X-Content-Duration", info.Data.ContentDuration);
             Response.Headers.Add("Content-Duration", info.Data.ContentDuration);
@@ -98,34 +76,36 @@ namespace Jaxofy.Controllers
 
             Response.Headers.Add("Content-Length", info.Data.ContentLength);
             Response.ContentType = info.Data.ContentType;
-            Response.StatusCode = info.Data.IsFullRequest ? (int)HttpStatusCode.OK : (int)HttpStatusCode.PartialContent;
+            Response.StatusCode =
+                info.Data.IsFullRequest ? (int) HttpStatusCode.OK : (int) HttpStatusCode.PartialContent;
             Response.Headers.Add("Last-Modified", info.Data.LastModified);
             if (!string.IsNullOrEmpty(info.Data.Etag))
             {
                 Response.Headers.Add("ETag", info.Data.Etag);
             }
+
             Response.Headers.Add("Cache-Control", info.Data.CacheControl);
             if (!string.IsNullOrEmpty(info.Data.Pragma))
             {
                 Response.Headers.Add("Pragma", info.Data.Pragma);
             }
+
             Response.Headers.Add("Expires", info.Data.Expires);
 
             await Response.Body.WriteAsync(info.Data.Bytes, 0, info.Data.Bytes.Length).ConfigureAwait(false);
 
-            
-            sw.Stop();
             return new EmptyResult();
         }
-        
-        public async Task<OperationResult<TrackStreamInfo>> TrackStreamInfoAsync(Guid trackId, long beginBytes, long endBytes, ApplicationUser roadieUser)
+
+        public async Task<OperationResult<TrackStreamInfo>> TrackStreamInfoAsync(Guid id, long beginBytes,
+            long endBytes, ApplicationUser roadieUser)
         {
-            var track = TrackList.GetRandomTrack(trackId);
-            
+            Track track = _databaseContext.Tracks.FirstOrDefault(x => x.RoadieId == id);
+
             string trackPath = null;
             try
             {
-                trackPath = track.PathToTrack();
+                trackPath = track.PathToTrack(_configuration);
             }
             catch (Exception ex)
             {
@@ -133,13 +113,14 @@ namespace Jaxofy.Controllers
             }
 
             var trackFileInfo = new FileInfo(trackPath);
-            
+
 
             var contentDurationTimeSpan = TimeSpan.FromMilliseconds(track.Duration ?? 0);
             var info = new TrackStreamInfo
             {
                 FileName = _httpEncoder?.UrlEncode(track.FileName).ToContentDispositionFriendly(),
-                ContentDisposition = $"attachment; filename=\"{_httpEncoder?.UrlEncode(track.FileName).ToContentDispositionFriendly()}\"",
+                ContentDisposition =
+                    $"attachment; filename=\"{_httpEncoder?.UrlEncode(track.FileName).ToContentDispositionFriendly()}\"",
                 ContentDuration = contentDurationTimeSpan.TotalSeconds.ToString()
             };
             var contentLength = endBytes - beginBytes + 1;
@@ -160,7 +141,7 @@ namespace Jaxofy.Controllers
             info.Pragma = "no-cache";
             info.Expires = "Mon, 01 Jan 1990 00:00:00 GMT";
 
-            var bytesToRead = (int)(endBytes - beginBytes) + 1;
+            var bytesToRead = (int) (endBytes - beginBytes) + 1;
             var trackBytes = new byte[bytesToRead];
             using (var fs = trackFileInfo.OpenRead())
             {
@@ -216,42 +197,44 @@ namespace Jaxofy.Controllers
             return $"TrackId [{Track}], ContentRange [{ContentRange}], Begin [{BeginBytes}], End [{EndBytes}]";
         }
     }
-    
+
     public static class MimeTypeHelper
     {
         public static string Mp3Extension = ".mp3";
 
-        public static readonly Dictionary<string, string> AudioMimeTypes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { Mp3Extension, "audio/mpeg" },
-            { ".m4a", "audio/mp4" },
-            { ".aac", "audio/mp4" },
-            { ".webma", "audio/webm" },
-            { ".wav", "audio/wav" },
-            { ".wma", "audio/x-ms-wma" },
-            { ".ogg", "audio/ogg" },
-            { ".oga", "audio/ogg" },
-            { ".opus", "audio/ogg" },
-            { ".ac3", "audio/ac3" },
-            { ".dsf", "audio/dsf" },
-            { ".m4b", "audio/m4b" },
-            { ".xsp", "audio/xsp" },
-            { ".dsp", "audio/dsp" }
-        };
+        public static readonly Dictionary<string, string> AudioMimeTypes =
+            new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                {Mp3Extension, "audio/mpeg"},
+                {".m4a", "audio/mp4"},
+                {".aac", "audio/mp4"},
+                {".webma", "audio/webm"},
+                {".wav", "audio/wav"},
+                {".wma", "audio/x-ms-wma"},
+                {".ogg", "audio/ogg"},
+                {".oga", "audio/ogg"},
+                {".opus", "audio/ogg"},
+                {".ac3", "audio/ac3"},
+                {".dsf", "audio/dsf"},
+                {".m4b", "audio/m4b"},
+                {".xsp", "audio/xsp"},
+                {".dsp", "audio/dsp"}
+            };
 
-        public static readonly Dictionary<string, string> ImageMimeTypes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { ".jpg", "image/jpeg" },
-            { ".jpeg", "image/jpeg" },
-            { ".tbn", "image/jpeg" },
-            { ".png", "image/png" },
-            { ".gif", "image/gif" },
-            { ".tiff", "image/tiff" },
-            { ".webp", "image/webp" },
-            { ".ico", "image/vnd.microsoft.icon" },
-            { ".svg", "image/svg+xml" },
-            { ".svgz", "image/svg+xml" }
-        };
+        public static readonly Dictionary<string, string> ImageMimeTypes =
+            new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+            {
+                {".jpg", "image/jpeg"},
+                {".jpeg", "image/jpeg"},
+                {".tbn", "image/jpeg"},
+                {".png", "image/png"},
+                {".gif", "image/gif"},
+                {".tiff", "image/tiff"},
+                {".webp", "image/webp"},
+                {".ico", "image/vnd.microsoft.icon"},
+                {".svg", "image/svg+xml"},
+                {".svgz", "image/svg+xml"}
+            };
 
 
         public static string Mp3MimeType => AudioMimeTypes[Mp3Extension];
@@ -260,10 +243,11 @@ namespace Jaxofy.Controllers
 
         public static bool IsFileAudioType(FileInfo file)
         {
-            if(file?.Exists != true)
+            if (file?.Exists != true)
             {
                 return false;
             }
+
             var ext = file.Extension;
             return AudioMimeTypes.TryGetValue(ext, out _);
         }
@@ -276,6 +260,7 @@ namespace Jaxofy.Controllers
             {
                 return false;
             }
+
             var ext = file.Extension;
             return ImageMimeTypes.TryGetValue(ext, out _);
         }
