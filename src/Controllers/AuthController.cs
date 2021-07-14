@@ -1,22 +1,22 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using DasTeamRevolution.Controllers.Base;
-using DasTeamRevolution.Data;
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Dto.Auth;
-using DasTeamRevolution.Models.Dto.Login;
-using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.AuthTokenService;
-using DasTeamRevolution.Services.Login;
 using IronSphere.Extensions;
+using Jaxofy.Controllers.Base;
+using Jaxofy.Data;
+using Jaxofy.Data.Models;
+using Jaxofy.Models.Dto.Auth;
+using Jaxofy.Models.Dto.Login;
+using Jaxofy.Models.Settings;
+using Jaxofy.Services.AuthTokenService;
+using Jaxofy.Services.Login;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
 
-namespace DasTeamRevolution.Controllers
+namespace Jaxofy.Controllers
 {
     [ApiController]
     [Route("api/v1/[controller]")]

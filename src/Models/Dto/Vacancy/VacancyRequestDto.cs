@@ -1,7 +1,7 @@
 using System;
-using DasTeamRevolution.Models.Dto.PostalAddress;
+using Jaxofy.Models.Dto.PostalAddress;
 
-namespace DasTeamRevolution.Models.Dto.Vacancy
+namespace Jaxofy.Models.Dto.Vacancy
 {
     public class VacancyRequestDto
     {

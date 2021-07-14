@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models
+﻿namespace Jaxofy.Models
 {
     /// <summary>
     /// Error structure to return in response bodies.

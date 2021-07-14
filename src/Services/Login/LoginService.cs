@@ -4,16 +4,16 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using DasTeamRevolution.Data;
-using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.AuthTokenService;
-using DasTeamRevolution.Services.PasswordHashing;
 using IronSphere.Extensions;
+using Jaxofy.Data;
+using Jaxofy.Models.Settings;
+using Jaxofy.Services.AuthTokenService;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace DasTeamRevolution.Services.Login
+namespace Jaxofy.Services.Login
 {
     /// <summary>
     /// Login service provider.

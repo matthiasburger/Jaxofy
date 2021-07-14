@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Data.Models.Base
+namespace Jaxofy.Data.Models.Base
 {
     /// <summary>
     /// Generic entity that is uniquely identifiable in the db

@@ -1,10 +1,10 @@
 using System;
-using DasTeamRevolution.Models.Dto.PostalAddress;
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Dto.RecordModification;
-using DasTeamRevolution.Models.Enums;
+using Jaxofy.Models.Dto.PostalAddress;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Dto.RecordModification;
+using Jaxofy.Models.Enums;
 
-namespace DasTeamRevolution.Models.Dto.Vacancy
+namespace Jaxofy.Models.Dto.Vacancy
 {
     public class VacancyResponseDto
     {

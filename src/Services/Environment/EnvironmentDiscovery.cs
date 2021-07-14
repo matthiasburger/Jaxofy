@@ -1,8 +1,7 @@
 ﻿using System;
-
 using IronSphere.Extensions;
 
-namespace DasTeamRevolution.Services.Environment
+namespace Jaxofy.Services.Environment
 {
     /// <inheritdoc cref="IEnvironmentDiscovery"/>
     public class EnvironmentDiscovery : IEnvironmentDiscovery

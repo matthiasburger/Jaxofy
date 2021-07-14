@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Data.Repositories.Base;
+using Jaxofy.Data.Models;
+using Jaxofy.Data.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace DasTeamRevolution.Data.Repositories
+namespace Jaxofy.Data.Repositories
 {
     public interface IApplicationUserRepository : IRepository<ApplicationUser, long>
     {

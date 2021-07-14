@@ -1,7 +1,6 @@
-﻿using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Dto.Document;
+﻿using Jaxofy.Models.Dto.Document;
 
-namespace DasTeamRevolution.Models.Dto.PoolEmployeeDocument
+namespace Jaxofy.Models.Dto.PoolEmployeeDocument
 {
     /// <summary>
     /// Request DTO for document uploading.

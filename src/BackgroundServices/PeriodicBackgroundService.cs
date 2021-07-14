@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DasTeamRevolution.BackgroundServices
+namespace Jaxofy.BackgroundServices
 {
     public abstract class PeriodicBackgroundService : BackgroundService
     {

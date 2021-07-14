@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
+using Jaxofy.Models.Dto.Client;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Dto.RecordModification;
 
-using DasTeamRevolution.Models.Dto.Client;
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Dto.RecordModification;
-
-namespace DasTeamRevolution.Models.Dto.ClientGroup
+namespace Jaxofy.Models.Dto.ClientGroup
 {
     public class ClientGroupResponseDto
     {

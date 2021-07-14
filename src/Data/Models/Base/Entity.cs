@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DasTeamRevolution.Data.Models.Base
+namespace Jaxofy.Data.Models.Base
 {
     /// <summary>
     /// Base entity class. Uniquely identifies every domain model in the DB

@@ -1,7 +1,7 @@
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Dto.RecordModification;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Dto.RecordModification;
 
-namespace DasTeamRevolution.Models.Dto.SupplierHeader
+namespace Jaxofy.Models.Dto.SupplierHeader
 {
     public class SupplierHeaderResponseDto
     {

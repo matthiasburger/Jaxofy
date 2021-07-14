@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Linq;
-using DasTeamRevolution.Services.PasswordHashing;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.EntityFrameworkCore;
 
-namespace DasTeamRevolution.Data
+namespace Jaxofy.Data
 {
     public interface IDataSeeder
     {
@@ -24,14 +24,10 @@ namespace DasTeamRevolution.Data
         public void SeedData()
         {
             if (_db.ApplicationUsers.Any())
-            {
                return;
-            }
 
-            string sql = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Data", "DemoSql", "demodata.sql"));
-
-            _db.Database.ExecuteSqlRaw(sql);
-            
+            // string sql = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Data", "DemoSql", "demodata.sql"));
+            // _db.Database.ExecuteSqlRaw(sql);
         }
     }
 }

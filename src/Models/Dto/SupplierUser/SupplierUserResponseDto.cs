@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.SupplierUser
+namespace Jaxofy.Models.Dto.SupplierUser
 {
     public class SupplierUserResponseDto
     {

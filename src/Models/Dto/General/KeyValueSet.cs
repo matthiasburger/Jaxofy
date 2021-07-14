@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.General
+namespace Jaxofy.Models.Dto.General
 {
     public class KeyValueSet<TKey, TValue>
     {

@@ -2,10 +2,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using DasTeamRevolution.Data.Models.Base;
+using Jaxofy.Data.Models.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace DasTeamRevolution.Data.Models
+namespace Jaxofy.Data.Models
 {
     /// <summary>
     /// Entity containing users from the application.

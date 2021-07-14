@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Enums
+﻿namespace Jaxofy.Models.Enums
 {
     public enum Gender : byte
     {

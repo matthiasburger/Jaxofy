@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace DasTeamRevolution.Services.Configuration
+namespace Jaxofy.Services.Configuration
 {
     /// <inheritdoc />
     public class ConfigurationService : IConfigurationService

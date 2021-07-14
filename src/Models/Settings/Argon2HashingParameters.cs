@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Settings
+namespace Jaxofy.Models.Settings
 {
     /// <summary>
     /// These are the hashing parameters for Argon2 that are meant to drive

@@ -1,7 +1,7 @@
-﻿using DasTeamRevolution.Data.Models.Base;
-using DasTeamRevolution.Models;
+﻿using Jaxofy.Data.Models.Base;
+using Jaxofy.Models;
 
-namespace DasTeamRevolution
+namespace Jaxofy
 {
     /// <summary>
     /// Useful class containing constant values commonly used throughout the application's codebase.

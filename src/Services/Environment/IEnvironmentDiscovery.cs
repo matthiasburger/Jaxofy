@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Services.Environment
+﻿namespace Jaxofy.Services.Environment
 {
     /// <summary>
     /// Service interface for detecting test environment VS. prod.

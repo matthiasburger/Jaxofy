@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Dto.PostalAddress
+﻿namespace Jaxofy.Models.Dto.PostalAddress
 {
     public class PostalAddressResponseDto
     {

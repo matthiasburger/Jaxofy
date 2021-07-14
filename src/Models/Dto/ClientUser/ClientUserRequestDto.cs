@@ -1,4 +1,4 @@
-namespace DasTeamRevolution.Models.Dto.ClientUser
+namespace Jaxofy.Models.Dto.ClientUser
 {
     public class ClientUserRequestDto
     {

@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace DasTeamRevolution.Services.Configuration
+namespace Jaxofy.Services.Configuration
 {
     /// <summary>
     /// Service for generating an <see cref="IConfiguration"/> instance (freshly allocated! files will be read from disk upon construction).

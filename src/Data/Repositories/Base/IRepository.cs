@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using DasTeamRevolution.Data.Models.Base;
+using Jaxofy.Data.Models.Base;
 
-namespace DasTeamRevolution.Data.Repositories.Base
+namespace Jaxofy.Data.Repositories.Base
 {
     /// <summary>
     /// Generic repository base interface for holding any type of uniquely identifiable <see cref="IEntity{T}"/>.

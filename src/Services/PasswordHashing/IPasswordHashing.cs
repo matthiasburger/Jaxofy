@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace DasTeamRevolution.Services.PasswordHashing
+namespace Jaxofy.Services.PasswordHashing
 {
     /// <summary>
     /// Service interface for hashing passwords.

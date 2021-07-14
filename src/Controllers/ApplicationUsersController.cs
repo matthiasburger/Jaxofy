@@ -1,22 +1,19 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-
 using AutoMapper;
-
-using DasTeamRevolution.Controllers.Base;
-using DasTeamRevolution.Data;
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Models.Dto.ApplicationUser;
-using DasTeamRevolution.Services.PasswordHashing;
-
+using Jaxofy.Controllers.Base;
+using Jaxofy.Data;
+using Jaxofy.Data.Models;
+using Jaxofy.Models.Dto.ApplicationUser;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace DasTeamRevolution.Controllers
+namespace Jaxofy.Controllers
 {
     [Authorize]
     [Route("api/v1/[controller]")]

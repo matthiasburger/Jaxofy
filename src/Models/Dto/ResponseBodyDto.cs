@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DasTeamRevolution.Models.Dto
+namespace Jaxofy.Models.Dto
 {
     /// <summary>
     /// Every request should return this, even if no items are included in it. <para> </para>

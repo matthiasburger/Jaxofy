@@ -1,6 +1,4 @@
-﻿using DasTeamRevolution.Data.Models;
-
-namespace DasTeamRevolution.Models.Dto.PoolEmployeeDocument
+﻿namespace Jaxofy.Models.Dto.PoolEmployeeDocument
 {
     /// <summary>
     /// Request DTO for fetching a list of all <see cref="PoolEmployeeDocument"/>s associated with a <see cref="PoolEmployee"/>.

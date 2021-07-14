@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DasTeamRevolution.Models.Dto.ApplicationUser
+namespace Jaxofy.Models.Dto.ApplicationUser
 {
     public class ApplicationUserResponseDto
     {

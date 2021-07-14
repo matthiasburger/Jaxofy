@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DasTeamRevolution.BackgroundServices
+namespace Jaxofy.BackgroundServices
 {
     public abstract class PeriodicServiceSettings
     {

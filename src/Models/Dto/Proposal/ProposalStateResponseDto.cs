@@ -1,7 +1,7 @@
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Enums;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Enums;
 
-namespace DasTeamRevolution.Models.Dto.Proposal
+namespace Jaxofy.Models.Dto.Proposal
 {
     public class ProposalStateResponseDto
     {

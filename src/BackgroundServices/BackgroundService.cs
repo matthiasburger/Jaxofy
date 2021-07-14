@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-
 using Microsoft.Extensions.Hosting;
 
-namespace DasTeamRevolution.BackgroundServices
+namespace Jaxofy.BackgroundServices
 {
     public abstract class BackgroundService : IHostedService, IDisposable
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace DasTeamRevolution.Extensions
+namespace Jaxofy.Extensions
 {
     /// <summary>
     /// Byte array extension methods.

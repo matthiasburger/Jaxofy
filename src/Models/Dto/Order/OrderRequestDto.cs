@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using DasTeamRevolution.Controllers;
-using DasTeamRevolution.Models.Dto.Assignment;
+using Jaxofy.Models.Dto.Assignment;
 
-namespace DasTeamRevolution.Models.Dto.Order
+namespace Jaxofy.Models.Dto.Order
 {
     /// <summary>
     /// Request DTO for creating <see cref="Order"/>s via the <see cref="OrdersController"/>.

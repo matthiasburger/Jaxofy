@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using DasTeamRevolution.Data.Models;
+using Jaxofy.Data.Models;
 
-namespace DasTeamRevolution.Services.Login
+namespace Jaxofy.Services.Login
 {
     /// <summary>
     /// Service interface for user login endpoint interactions.

@@ -1,14 +1,14 @@
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
-using DasTeamRevolution.Extensions;
-using DasTeamRevolution.Models.Settings;
 using IronSphere.Extensions;
+using Jaxofy.Extensions;
+using Jaxofy.Models.Settings;
 using Konscious.Security.Cryptography;
 using Microsoft.Extensions.Options;
 
-namespace DasTeamRevolution.Services.PasswordHashing
+namespace Jaxofy.Services.PasswordHashing
 {
     /// <summary>
     /// Argon2 implementation of the <see cref="IPasswordHashing"/> interface. 

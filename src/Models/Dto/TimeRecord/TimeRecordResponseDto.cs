@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using DasTeamRevolution.Models.Dto.RecordCreation;
-using DasTeamRevolution.Models.Dto.RecordModification;
-using DasTeamRevolution.Models.Dto.TimeRecordStateHistory;
+using Jaxofy.Models.Dto.RecordCreation;
+using Jaxofy.Models.Dto.RecordModification;
+using Jaxofy.Models.Dto.TimeRecordStateHistory;
 
-namespace DasTeamRevolution.Models.Dto.TimeRecord
+namespace Jaxofy.Models.Dto.TimeRecord
 {
     public class TimeRecordResponseDto
     {

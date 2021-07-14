@@ -1,11 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Jaxofy.Data.Models.ValidationAttributes;
+using Jaxofy.Models.Dto.Document;
 
-using DasTeamRevolution.Data.Models;
-using DasTeamRevolution.Data.Models.ValidationAttributes;
-using DasTeamRevolution.Models.Dto.Document;
-
-namespace DasTeamRevolution.Models.Dto.Proposal
+namespace Jaxofy.Models.Dto.Proposal
 {
     /// <summary>
     /// DTO for <see cref="Proposal"/> creation POST requests.

@@ -6,32 +6,32 @@ using System.Security.Cryptography;
 using System.Threading;
 using AspNetCoreRateLimit;
 using AutoMapper.Extensions.ExpressionMapping;
-using DasTeamRevolution.Data;
-using DasTeamRevolution.Data.Repositories;
-using DasTeamRevolution.Models.Dto;
-using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.AuthTokenService;
-using DasTeamRevolution.Services.Environment;
-using DasTeamRevolution.Services.Login;
-using DasTeamRevolution.Services.PasswordHashing;
+using Jaxofy.Data;
+using Jaxofy.Data.Repositories;
+using Jaxofy.Models.Dto;
+using Jaxofy.Models.Settings;
+using Jaxofy.Services.AuthTokenService;
+using Jaxofy.Services.Environment;
+using Jaxofy.Services.Login;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.ResponseCompression;
-using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OData.Edm;
 using Serilog;
 
-namespace DasTeamRevolution
+namespace Jaxofy
 {
     /// <summary>
     /// Service injection hosted service registrations happens in this class (created inside <see cref="Program"/>).

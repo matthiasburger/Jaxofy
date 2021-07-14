@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DasTeamRevolution.Models.Dto.RecordCreation
+namespace Jaxofy.Models.Dto.RecordCreation
 {
     public class RecordCreationResponseDto
     {

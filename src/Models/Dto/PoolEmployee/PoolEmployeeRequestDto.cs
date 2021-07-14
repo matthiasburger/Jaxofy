@@ -1,7 +1,7 @@
 using System;
-using DasTeamRevolution.Models.Enums;
+using Jaxofy.Models.Enums;
 
-namespace DasTeamRevolution.Models.Dto.PoolEmployee
+namespace Jaxofy.Models.Dto.PoolEmployee
 {
     public class PoolEmployeeRequestDto
     {

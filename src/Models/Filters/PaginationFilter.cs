@@ -1,4 +1,4 @@
-﻿namespace DasTeamRevolution.Models.Filters
+﻿namespace Jaxofy.Models.Filters
 {
     /// <summary>
     /// Filter for driving pagination of query responses.

@@ -1,11 +1,8 @@
-using DasTeamRevolution.Models.Dto.Employee;
-using DasTeamRevolution.Models.Dto.Supplier;
-using DasTeamRevolution.Models.Dto.Vacancy;
+using Jaxofy.Models.Dto.Employee;
+using Jaxofy.Models.Dto.Supplier;
 
-namespace DasTeamRevolution.Models.Dto.Proposal
+namespace Jaxofy.Models.Dto.Proposal
 {
-    using Data.Models;
-
     public class ProposalResponseDto
     {
         /// <summary>
