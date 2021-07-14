@@ -10,7 +10,6 @@ using DasTeamRevolution.Data;
 using DasTeamRevolution.Data.Repositories;
 using DasTeamRevolution.Models.Dto;
 using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.AddressResolution;
 using DasTeamRevolution.Services.AuthTokenService;
 using DasTeamRevolution.Services.Environment;
 using DasTeamRevolution.Services.Login;
@@ -177,7 +176,6 @@ namespace DasTeamRevolution
             services.AddTransient<IAuthTokenService, AuthTokenService>();
             services.AddTransient<IPasswordHashing, PasswordHashingArgon2>();
             services.AddTransient<IEnvironmentDiscovery, EnvironmentDiscovery>();
-            services.AddTransient<IAddressResolutionService, AddressResolutionService>();
             services.AddTransient<IDataSeeder, DataSeeder>();
 
             services.AddAutoMapper(cfg => { cfg.AddExpressionMapping(); }, AppDomain.CurrentDomain.GetAssemblies());

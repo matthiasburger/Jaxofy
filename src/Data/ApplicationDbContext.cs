@@ -45,38 +45,7 @@ namespace DasTeamRevolution.Data
     public class ApplicationDbContext : DbContext
     {
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<ClientUser> ClientUsers { get; set; }
-        public DbSet<ClientUserSetting> ClientUserPermissions { get; set; }
-        public DbSet<ClientGroup> ClientGroups { get; set; }
-        public DbSet<ClientHeader> ClientHeaders { get; set; }
-        public DbSet<ClientHeaderAdmin> ClientHeaderAdmins { get; set; }
-        public DbSet<ClientEmployeeProfile> ClientProfiles { get; set; }
-        public DbSet<ClientSupplier> ClientSuppliers { get; set; }
-        public DbSet<JobProfile> JobProfiles { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<EmployeeProfile> EmployeeProfiles { get; set; }
-        public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<SupplierUser> SupplierUsers { get; set; }
-        public DbSet<SupplierHeader> SupplierHeaders { get; set; }
-        public DbSet<SupplierUserSetting> SupplierUserPermissions { get; set; }
-        public DbSet<PoolEmployee> PoolEmployees { get; set; }
-        public DbSet<PoolEmployeeDocument> PoolEmployeeDocuments { get; set; }
-        public DbSet<Vacancy> Vacancies { get; set; }
-        public DbSet<VacancyStateHistory> VacancyStates { get; set; }
-        public DbSet<Proposal> Proposals { get; set; }
-        public DbSet<ProposalDocument> ProposalDocuments { get; set; }
-        public DbSet<ProposalStateHistory> ProposalStates { get; set; }
-        public DbSet<Employee> Employees { get; set; }
-        public DbSet<EmployeeDocument> EmployeeDocuments { get; set; }
-        public DbSet<Rating> Ratings { get; set; }
-        public DbSet<Assignment> Assignments { get; set; }
-        public DbSet<TimeRecord> TimeRecords { get; set; }
-        public DbSet<TimeRecordStateHistory> TimeRecordStates { get; set; }
-        public DbSet<RecordCreation> RecordCreations { get; set; }
-        public DbSet<RecordModification> RecordModifications { get; set; }
-        public DbSet<PostalAddress> PostalAddresses { get; set; }
-
+        
         private readonly ILoggerFactory _loggerFactory;
         private readonly IEnvironmentDiscovery _environmentDiscovery;
         private readonly IPasswordHashing _passwordHashing;
