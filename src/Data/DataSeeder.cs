@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
+using Jaxofy.Data.Models;
 using Jaxofy.Services.PasswordHashing;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,8 +27,15 @@ namespace Jaxofy.Data
             if (_db.ApplicationUsers.Any())
                return;
 
-            // string sql = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Data", "DemoSql", "demodata.sql"));
-            // _db.Database.ExecuteSqlRaw(sql);
+            _db.ApplicationUsers.Add(new ApplicationUser
+            {
+                Email = "matthias@fam-burger.de",
+                Password = "matthias",
+                Username = "matthias",
+                IsAdmin = true
+            });
+
+            _db.SaveChanges();
         }
     }
 }

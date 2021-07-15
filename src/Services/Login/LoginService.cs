@@ -35,10 +35,10 @@ namespace Jaxofy.Services.Login
             _authTokenService = authTokenService;
         }
 
-        public async Task<string> Login(string email, string password)
+        public async Task<string> Login(string username, string password)
         {
             ApplicationUser applicationUser = await _db.ApplicationUsers
-                .Where(user => user.Email == email && user.IsActive)
+                .Where(user => user.Username == username && user.IsActive)
                 .FirstOrDefaultAsync();
 
             if (applicationUser is null || applicationUser.SuspendedUntil >= DateTime.Now)

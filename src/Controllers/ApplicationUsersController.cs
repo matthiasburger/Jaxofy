@@ -61,7 +61,7 @@ namespace Jaxofy.Controllers
         [HttpPost, Route("create-dev"), AllowAnonymous]
         public async Task<IActionResult> CreateUser(string email, string password, string firstName, string lastName)
         {
-            if (await _db.ApplicationUsers.AsNoTracking().AnyAsync(u => u.Email == email))
+            if (await _db.ApplicationUsers.AsNoTracking().AnyAsync(u => u.Username == email))
             {
                 return Error(400, Constants.Errors.UserAlreadyExists);
             }
@@ -69,6 +69,7 @@ namespace Jaxofy.Controllers
             ApplicationUser user = new()
             {
                 Email = email,
+                Username = email,
                 Password = await _passwordHashing.HashPassword(password),
                 CreatedOn = DateTime.UtcNow,
                 IsAdmin = true,
