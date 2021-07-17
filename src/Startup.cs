@@ -97,7 +97,10 @@ namespace Jaxofy
                     builder => builder
                         .WithOrigins(
                             "http://localhost:4200",
-                            "http://127.0.0.1:4200") // TODO: once deployed, add the production server's domain name to this list. 
+                            "http://127.0.0.1:4200",
+                            "http://localhost:8100",
+                            "http://127.0.0.1:8100"
+                            ) // TODO: once deployed, add the production server's domain name to this list. 
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()
