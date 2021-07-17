@@ -46,10 +46,10 @@ namespace Jaxofy.Controllers
         [HttpPost, Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto dto)
         {
-            if (dto.Email.IsNullOrEmpty() || dto.Password.IsNullOrEmpty())
+            if (dto.Username.IsNullOrEmpty() || dto.Password.IsNullOrEmpty())
                 return Error(401, Constants.Errors.LoginFailed);
 
-            string token = await _loginService.Login(dto.Email, dto.Password);
+            string token = await _loginService.Login(dto.Username, dto.Password);
 
             if (token.IsNullOrEmpty())
                 return Error(401, Constants.Errors.LoginFailed);

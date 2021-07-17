@@ -12,6 +12,7 @@ namespace Jaxofy.Data.Models
     /// </summary>
     [Table("ApplicationUser")]
     [Index(nameof(Email), IsUnique = true)]
+    [Index(nameof(Username), IsUnique = true)]
     public class ApplicationUser : IEntity
     {
         /// <summary>
@@ -80,5 +81,11 @@ namespace Jaxofy.Data.Models
         public int FailedLoginCount { get; set; }
         public DateTime? SuspendedUntil { get; set; }
         public DateTime? LastLogin { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the users username.
+        /// </summary>
+        [Column("Username")]
+        public string Username { get; set; }
     }
 }
