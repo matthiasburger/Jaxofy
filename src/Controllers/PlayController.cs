@@ -46,7 +46,7 @@ namespace Jaxofy.Controllers
 
             long byteStart = _trackService.DetermineByteStartFromHeaders(Request.Headers);
 
-            long fileSize = track.Data.GetFileSize(_configuration);
+            long fileSize = track.Data.FileSize;
             long byteEnd = _trackService.DetermineByteEndFromHeaders(Request.Headers, fileSize);
 
             (long start, long end) = _trackService.DetermineByteRangeFromHeaders(Request.Headers, fileSize);

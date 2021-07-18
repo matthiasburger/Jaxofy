@@ -36,7 +36,7 @@ namespace Jaxofy.Services.TrackService
         /// <returns></returns>
         public async Task<OperationResult<Track>> StreamCheckAndInfoAsync(Guid id)
         {
-            Track track = await _dbContext.Tracks.FirstOrDefaultAsync(x => x.RoadieId == id);
+            Track track = await _dbContext.Tracks.FirstOrDefaultAsync(x => x.SongGuid == id);
 
             if (track == null)
                 return new OperationResult<Track>(true, $"Track Not Found [{id}]");
@@ -122,7 +122,7 @@ namespace Jaxofy.Services.TrackService
         /// <returns></returns>
         public async Task<OperationResult<TrackStreamInfo>> TrackStreamInfoAsync(Guid id, long beginBytes, long endBytes)
         {
-            Track track = await _dbContext.Tracks.FirstOrDefaultAsync(x => x.RoadieId == id);
+            Track track = await _dbContext.Tracks.FirstOrDefaultAsync(x => x.SongGuid == id);
 
             string trackPath = track.PathToTrack(_configuration);
             FileInfo trackFileInfo = new(trackPath);
@@ -136,7 +136,7 @@ namespace Jaxofy.Services.TrackService
                 ContentDisposition =
                     $"attachment; filename=\"{_httpEncoder?.UrlEncode(track.FileName).ToContentDispositionFriendly()}\"",
                 ContentDuration = contentDurationTimeSpan.TotalSeconds.ToString(CultureInfo.InvariantCulture),
-                Track = new DataToken {Text = track.Title, Value = track.RoadieId.ToString()},
+                Track = new DataToken {Text = track.Title, Value = track.SongGuid.ToString()},
                 BeginBytes = beginBytes,
                 EndBytes = endBytes,
                 ContentRange = $"bytes {beginBytes}-{endBytes}/{contentLength}",

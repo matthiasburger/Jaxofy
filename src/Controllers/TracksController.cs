@@ -62,7 +62,7 @@ namespace Jaxofy.Controllers
                 Title = tag?.Title ?? formFile.FileName,
                 ArtistName = "keiner",
                 FileName = songGuid.ToString(),
-                RoadieId = songGuid,
+                SongGuid = songGuid,
                 CreatedDate = DateTime.Now,
                 FileSize = data.LongLength,
                 LastUpdated = null,
