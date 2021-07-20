@@ -29,6 +29,7 @@ namespace Jaxofy.Data.Models
         public double? Duration { get; set; }
         
         [Column("SongGuid")]
+        [JsonProperty("songGuid")]
         public Guid SongGuid { get; set; }
         
         [Column("LastUpdated")]
@@ -47,6 +48,6 @@ namespace Jaxofy.Data.Models
 
         [NotMapped]
         [JsonProperty("url")]
-        public string Url => Path.Combine("http://localhost:8000/api/v1/play", SongGuid.ToString());
+        public string Url => Path.Combine("play", SongGuid.ToString());
     }
 }

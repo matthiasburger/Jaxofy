@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jaxofy", "src\Jaxofy.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasTeamRevolution.Tests", "tests\DasTeamRevolution.Tests.csproj", "{0049F16B-8000-4BE5-9B25-FD38C581FB7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jaxofy.Tools.DtosToTypescript", "tools\Jaxofy.Tools.DtosToTypescript\Jaxofy.Tools.DtosToTypescript.csproj", "{5F8AB94C-5565-4B46-936D-CEA43B4F6753}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0049F16B-8000-4BE5-9B25-FD38C581FB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

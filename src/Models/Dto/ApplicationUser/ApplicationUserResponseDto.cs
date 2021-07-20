@@ -1,7 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using Jaxofy.Attributes;
 
 namespace Jaxofy.Models.Dto.ApplicationUser
 {
+    [Dto]
+    public class GenericOne<T, T2>
+    {
+        public T MyType { get; set; }
+        public int Id { get; set; }
+        public IEnumerable<T2> MyValues { get; set; }
+    }
+    
+    [Dto]
     public class ApplicationUserResponseDto
     {
         /// <summary>
