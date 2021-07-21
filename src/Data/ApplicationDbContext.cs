@@ -31,7 +31,7 @@ namespace Jaxofy.Data
             IConfiguration configuration = configurationService.GetPlatformAgnosticConfig();
 
             DbContextOptionsBuilder<ApplicationDbContext> optionsBuilder = new();
-            optionsBuilder.UseSqlServer(configuration["DasTeamRevolutionSqlServerConnectionString"]);
+            optionsBuilder.UseSqlServer(configuration["ApplicationConnectionString"]);
 
             return new ApplicationDbContext(optionsBuilder.Options, new LoggerFactory(),
                 new EnvironmentDiscovery(),

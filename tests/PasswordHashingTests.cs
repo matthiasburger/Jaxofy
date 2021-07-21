@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using DasTeamRevolution.Models.Settings;
-using DasTeamRevolution.Services.PasswordHashing;
+using Jaxofy.Models.Settings;
+using Jaxofy.Services.PasswordHashing;
 using Microsoft.Extensions.Options;
 using Xunit;
 using Moq;
