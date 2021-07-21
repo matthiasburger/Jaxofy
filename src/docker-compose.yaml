@@ -27,4 +27,4 @@ services:
     environment:
       DasTeamRevolutionDocker: "true"
       DasTeamRevolutionDevelopment: "true"
-      DasTeamRevolutionSqlServerConnectionString: "Server=db,1433;MultipleActiveResultSets=true;Initial Catalog=DasTeamRevolution;User ID=sa;Password=DEV_mssql-PW_356.4,DO_NOT_use,this.PW,for-prod"
+      ApplicationConnectionString: "Server=db,1433;MultipleActiveResultSets=true;Initial Catalog=DasTeamRevolution;User ID=sa;Password=DEV_mssql-PW_356.4,DO_NOT_use,this.PW,for-prod"

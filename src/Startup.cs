@@ -49,43 +49,6 @@ namespace Jaxofy
             _environmentDiscovery = new EnvironmentDiscovery();
         }
 
-        private void _waitForDb()
-        {
-            string dbConnectionString = _configuration["DasTeamRevolutionSqlServerConnectionString"];
-
-            SqlConnectionStringBuilder connectionStringBuilder = new(dbConnectionString)
-            {
-                InitialCatalog = "master"
-            };
-
-            DateTime giveUpTime = DateTime.Now + TimeSpan.FromMinutes(4);
-            while (DateTime.Now < giveUpTime)
-            {
-                Thread.Sleep(4000);
-                SqlConnection connection = null;
-                try
-                {
-                    connection = new SqlConnection(connectionStringBuilder.ConnectionString);
-                    connection.Open();
-
-                    if (connection.State == ConnectionState.Open)
-                    {
-                        return;
-                    }
-                }
-                catch
-                {
-                    // Ignored.
-                }
-                finally
-                {
-                    connection?.Dispose();
-                }
-            }
-
-            throw new ApplicationException("Failed to connect to database!");
-        }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -158,11 +121,9 @@ namespace Jaxofy
                 });
 
             services.AddAuthorization();
-
-            _waitForDb();
             
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(_configuration["DasTeamRevolutionSqlServerConnectionString"]));
+                options.UseSqlServer(_configuration["ApplicationConnectionString"]));
 
             services.AddResponseCompression(options =>
                 options.Providers.Add<BrotliCompressionProvider>());

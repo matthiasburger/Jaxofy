@@ -108,7 +108,6 @@ export interface {className} {{
             {typeof(double), "number"},
             {typeof(bool), "boolean"},
             {typeof(string), "string"},
-            {typeof(DateTime), "date"},
             {typeof(IEnumerable<>), "Array<1>"}
         } ;
     }

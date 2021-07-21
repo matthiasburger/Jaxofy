@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\src\DasTeamRevolution.csproj" />
+      <ProjectReference Include="..\src\Jaxofy.csproj" />
     </ItemGroup>
 
 </Project>
