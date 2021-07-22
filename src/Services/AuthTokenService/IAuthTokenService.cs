@@ -22,5 +22,7 @@ namespace Jaxofy.Services.AuthTokenService
         /// <param name="httpContext"><see cref="HttpContext"/></param>
         /// <returns>The found user ID; <c>null</c> in case of a failure.</returns>
         public long? ExtractUserId(HttpContext httpContext);
+
+        Task<ApplicationUser> GetApplicationUserAsync(HttpContext httpContext);
     }
 }

@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using IronSphere.Extensions;
 using Jaxofy.Data;
+using Jaxofy.Data.Models;
 using Jaxofy.Extensions;
 using Jaxofy.Models.Settings;
 using Microsoft.AspNetCore.Http;
@@ -89,17 +90,34 @@ namespace Jaxofy.Services.AuthTokenService
             return jwt.StartsWith("Bearer ", StringComparison.InvariantCultureIgnoreCase) ? jwt[7..] : null;
         }
 
-        public long? ExtractUserId(HttpContext httpContext)
+        private long? _extractUserId(HttpContext httpContext)
         {
             try
             {
                 JwtSecurityToken token = new JwtSecurityTokenHandler().ReadToken(ExtractJwt(httpContext)) as JwtSecurityToken;
-                return long.Parse(token.Subject);
+
+                if (long.TryParse(token?.Subject, out long userId))
+                    return userId;
             }
             catch
             {
                 return null;
             }
+
+            return null;
+        }
+        
+        public long? ExtractUserId(HttpContext httpContext) => _extractUserId(httpContext);
+
+        public async Task<ApplicationUser> GetApplicationUserAsync(HttpContext httpContext)
+        {
+            long? userId = _extractUserId(httpContext);
+            if (!userId.HasValue)
+                return null;
+
+            return await _db.ApplicationUsers
+                .AsNoTracking()
+                .SingleOrDefaultAsync(x => x.Id == userId);
         }
     }
 }

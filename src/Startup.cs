@@ -63,7 +63,8 @@ namespace Jaxofy
                             "http://localhost:4200",
                             "http://127.0.0.1:4200",
                             "http://localhost:8100",
-                            "http://127.0.0.1:8100"
+                            "http://127.0.0.1:8100",
+                            "http://jaxofy.fam-burger.de"
                             ) // TODO: once deployed, add the production server's domain name to this list. 
                         .AllowAnyHeader()
                         .AllowAnyMethod()
@@ -141,6 +142,7 @@ namespace Jaxofy
 
             services.AddTransient<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddTransient<ITrackRepository, TrackRepository>();
+            services.AddTransient<IMigrationRepository, MigrationRepository<ApplicationDbContext>>();
 
             services.AddTransient<ILoginService, LoginService>();
             services.AddTransient<IAuthTokenService, AuthTokenService>();
