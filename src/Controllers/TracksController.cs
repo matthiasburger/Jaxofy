@@ -2,13 +2,17 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Id3;
+
 using Jaxofy.Controllers.Base;
-using Jaxofy.Data;
 using Jaxofy.Data.Models;
+using Jaxofy.Data.Repositories;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 
 namespace Jaxofy.Controllers
@@ -17,20 +21,27 @@ namespace Jaxofy.Controllers
     [Route("api/v1/[controller]")]
     public class TracksController : ApiBaseController
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly ITrackRepository _trackRepository;
         private readonly IConfiguration _configuration;
 
-        public TracksController(ApplicationDbContext dbContext, IConfiguration configuration)
+        public TracksController(ITrackRepository trackRepository, IConfiguration configuration)
         {
-            _dbContext = dbContext;
+            _trackRepository = trackRepository;
             _configuration = configuration;
         }
 
         [HttpGet, Route("")]
         public ActionResult Get(ODataQueryOptions<Track> query)
         {
-            IQueryable tracks = query.ApplyTo(_dbContext.Tracks);
+            IQueryable tracks = query.ApplyTo(_trackRepository.GetQueryable());
             return Ok(tracks);
+        }
+
+        [HttpGet, Route("{id:long}")]
+        public async Task<ActionResult> Get(long id)
+        {
+            Track track = await _trackRepository.SingleOrDefaultNoTracking(x => x.Id == id);
+            return Ok(track);
         }
 
         [HttpPost, Route("")]
@@ -40,11 +51,11 @@ namespace Jaxofy.Controllers
 
             string filePath = Path.Combine(_configuration["BasePath"], songGuid.ToString());
 
-            await using MemoryStream memS = new ();
+            await using MemoryStream memS = new();
             await formFile.CopyToAsync(memS);
 
             byte[] data = memS.ToArray();
-           
+
             await System.IO.File.WriteAllBytesAsync(filePath, data);
 
             int lengthInMilliseconds = 0;
@@ -60,7 +71,7 @@ namespace Jaxofy.Controllers
             Track track = new()
             {
                 Title = tag?.Title ?? formFile.FileName,
-                ArtistName = "keiner",
+                ArtistName = @"keiner",
                 FileName = songGuid.ToString(),
                 SongGuid = songGuid,
                 CreatedDate = DateTime.Now,
@@ -69,10 +80,14 @@ namespace Jaxofy.Controllers
                 Duration = lengthInMilliseconds
             };
 
-            await _dbContext.Tracks.AddAsync(track);
-            await _dbContext.SaveChangesAsync();
+            (bool success, EntityEntry<Track> entity) = await _trackRepository.Add(track);
 
-            return Ok(track);
+            if (!success)
+                return InternalServerError();
+
+            return EnvelopeResult.Created(
+                Url.Action("Get", "Tracks", new {id = entity.Entity.Id}), 
+                entity.Entity);
         }
     }
 }
