@@ -73,7 +73,7 @@ namespace Jaxofy
             IEdmModel v1 = EdmModelBuilder.GetEdmModel();
 
             services.AddOData(opt => opt
-                .AddModel("api/v{version}", v1)
+                //.AddModel("api/v{version}", v1)
                 .Select()
                 .OrderBy()
                 .Filter()

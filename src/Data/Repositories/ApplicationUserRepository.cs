@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+
 using Jaxofy.Data.Models;
 using Jaxofy.Data.Repositories.Base;
+
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace Jaxofy.Data.Repositories
 {
@@ -32,21 +35,33 @@ namespace Jaxofy.Data.Repositories
 
         /// <inheritdoc/>
         public IQueryable<ApplicationUser> GetQueryable()
-            => _context.ApplicationUsers.AsNoTracking();
+            => _context.ApplicationUsers.AsQueryable();
 
         /// <inheritdoc/>
         public async Task<ApplicationUser> SingleOrDefault(Expression<Func<ApplicationUser, bool>> predicate)
             => await _context.ApplicationUsers.SingleOrDefaultAsync(predicate);
+
+        public async Task<ApplicationUser> SingleOrDefaultNoTracking(Expression<Func<ApplicationUser, bool>> predicate)
+            => await _context.ApplicationUsers.AsNoTracking().SingleOrDefaultAsync(predicate);
+
+        public async Task<bool> AnyNoTracking(Expression<Func<ApplicationUser, bool>> predicate)
+            => await _context.ApplicationUsers.AsNoTracking().AnyAsync(predicate);
+
+        public async Task<long> CountLongNoTracking(Expression<Func<ApplicationUser, bool>> predicate)
+            => await _context.ApplicationUsers.AsNoTracking().LongCountAsync(predicate);
+
+        public async Task<int> CountNoTracking(Expression<Func<ApplicationUser, bool>> predicate)
+            => await _context.ApplicationUsers.AsNoTracking().CountAsync(predicate);
 
         /// <inheritdoc/>
         public async Task<IEnumerable<ApplicationUser>> Find(Expression<Func<ApplicationUser, bool>> predicate)
             => await _context.ApplicationUsers.Where(predicate).ToListAsync();
 
         /// <inheritdoc/>
-        public async Task<bool> Add(ApplicationUser entity)
+        public async Task<(bool success, EntityEntry<ApplicationUser> entity)> Add(ApplicationUser entity)
         {
-            await _context.ApplicationUsers.AddAsync(entity);
-            return await _context.SaveChangesAsync() == 1;
+            EntityEntry<ApplicationUser> createdUser = await _context.ApplicationUsers.AddAsync(entity);
+            return (await _context.SaveChangesAsync() == 1 && createdUser.IsKeySet, createdUser);
         }
 
         /// <inheritdoc/>

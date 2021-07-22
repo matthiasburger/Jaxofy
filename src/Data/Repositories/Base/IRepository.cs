@@ -5,6 +5,8 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Jaxofy.Data.Models.Base;
 
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 namespace Jaxofy.Data.Repositories.Base
 {
     /// <summary>
@@ -14,7 +16,7 @@ namespace Jaxofy.Data.Repositories.Base
     /// <typeparam name="TEntity">The type of entity that the repository is going to store.</typeparam>
     /// <typeparam name="TEntityKey">The type of unique id that the repository's entities will have (e.g. guid <c>string</c>, <c>int</c>, etc...).</typeparam>
     public interface IRepository<TEntity, in TEntityKey> 
-        where TEntity : IEntity<TEntityKey>
+        where TEntity : class, IEntity<TEntityKey>
     {
         /// <summary>
         /// Gets an entity by its unique identifier.
@@ -45,6 +47,18 @@ namespace Jaxofy.Data.Repositories.Base
         Task<TEntity> SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
         /// <summary>
+        /// Gets a single entity from the repo according to the specified predicate condition.<para> </para>
+        /// If 0 or >1 entities are found, <c>null</c> is returned.
+        /// </summary>
+        /// <param name="predicate">The search predicate.</param>
+        /// <returns>Single found entity; <c>null</c> if 0 or >1 entities were found.</returns>
+        Task<TEntity> SingleOrDefaultNoTracking(Expression<Func<TEntity, bool>> predicate);
+        
+        Task<bool> AnyNoTracking(Expression<Func<TEntity, bool>> predicate);
+        Task<int> CountNoTracking(Expression<Func<TEntity, bool>> predicate);
+        Task<long> CountLongNoTracking(Expression<Func<TEntity, bool>> predicate);
+
+        /// <summary>
         /// Finds all entities according to the specified predicate <see cref="Expression"/>.
         /// </summary>
         /// <param name="predicate">The search predicate (all entities that match the provided conditions will be added to the query's result).</param>
@@ -56,7 +70,7 @@ namespace Jaxofy.Data.Repositories.Base
         /// </summary>
         /// <param name="entity">The entity to add.</param>
         /// <returns>Whether the entity could be added successfully or not.</returns>
-        Task<bool> Add(TEntity entity);
+        Task<(bool success, EntityEntry<TEntity> entity)> Add(TEntity entity);
         
         /// <summary>
         /// Adds multiple entities at once.
