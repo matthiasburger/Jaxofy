@@ -1,11 +1,10 @@
 using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Threading;
+
 using AspNetCoreRateLimit;
 using AutoMapper.Extensions.ExpressionMapping;
+
 using Jaxofy.Data;
 using Jaxofy.Data.Repositories;
 using Jaxofy.Models.Dto;
@@ -16,6 +15,7 @@ using Jaxofy.Services.HttpEncoder;
 using Jaxofy.Services.Login;
 using Jaxofy.Services.PasswordHashing;
 using Jaxofy.Services.TrackService;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +31,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OData.Edm;
+
 using Serilog;
 
 namespace Jaxofy
@@ -73,7 +74,7 @@ namespace Jaxofy
             IEdmModel v1 = EdmModelBuilder.GetEdmModel();
 
             services.AddOData(opt => opt
-                .AddModel("api/v{version}", v1)
+                .AddModel(v1)
                 .Select()
                 .OrderBy()
                 .Filter()
@@ -139,6 +140,7 @@ namespace Jaxofy
                 });
 
             services.AddTransient<IApplicationUserRepository, ApplicationUserRepository>();
+            services.AddTransient<ITrackRepository, TrackRepository>();
 
             services.AddTransient<ILoginService, LoginService>();
             services.AddTransient<IAuthTokenService, AuthTokenService>();

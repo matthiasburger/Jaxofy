@@ -1,18 +1,19 @@
 using System;
-using System.Linq;
 using System.Threading.Tasks;
+
 using IronSphere.Extensions;
+
 using Jaxofy.Controllers.Base;
-using Jaxofy.Data;
 using Jaxofy.Data.Models;
+using Jaxofy.Data.Repositories;
 using Jaxofy.Models.Dto.Auth;
 using Jaxofy.Models.Dto.Login;
 using Jaxofy.Models.Settings;
 using Jaxofy.Services.AuthTokenService;
 using Jaxofy.Services.Login;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
 
@@ -23,13 +24,13 @@ namespace Jaxofy.Controllers
     public class AuthController : ApiBaseController
     {
         private readonly ILoginService _loginService;
-        private readonly ApplicationDbContext _dbContext;
+        private readonly IApplicationUserRepository _applicationUserRepository;
         private readonly IAuthTokenService _authTokenService;
         private readonly IOptionsMonitor<JwtSettings> _jwtSettingsMonitor;
 
-        public AuthController(ILoginService loginService, IOptionsMonitor<JwtSettings> jwtSettingsMonitor, IAuthTokenService authTokenService, ApplicationDbContext dbContext)
+        public AuthController(ILoginService loginService, IOptionsMonitor<JwtSettings> jwtSettingsMonitor, IAuthTokenService authTokenService, IApplicationUserRepository applicationUserRepository)
         {
-            _dbContext = dbContext;
+            _applicationUserRepository = applicationUserRepository;
             _loginService = loginService;
             _authTokenService = authTokenService;
             _jwtSettingsMonitor = jwtSettingsMonitor;
@@ -86,10 +87,8 @@ namespace Jaxofy.Controllers
             if (!userId.HasValue)
                 return Error(403, Constants.Errors.LoginFailed);
 
-            ApplicationUser user = await _dbContext
-                .ApplicationUsers
-                .Where(u => u.Id == userId && u.IsActive)
-                .FirstOrDefaultAsync();
+            ApplicationUser user = await _applicationUserRepository
+                    .SingleOrDefaultNoTracking(u => u.Id == userId && u.IsActive);
 
             if (user is null)
             {
