@@ -32,26 +32,19 @@ namespace Jaxofy.Tools.DtosToTypescript
             Assembly assembly = typeof(DtoAttribute).Assembly;
             Settings config = _configuration.Get<Settings>();
 
-            IEnumerable<Type> _ = (from type in assembly.GetExportedTypes()//.AsParallel()
+            IEnumerable<IAnalyzedType> analyzedTypes = from type in assembly.GetExportedTypes()//.AsParallel()
                 where type.GetCustomAttribute<DtoAttribute>() is not null
                 let analyzedType = TypeAnalyzer.Create(type)
                     .Analyze()
-                select analyzedType
-                    .WriteToPath(config.Export.Directory)).ToList();
+                select analyzedType;
+            
+            await Task.WhenAll(analyzedTypes.Select(x => x.WriteToPath(config.Export.Directory)));
         }
 
         private static int Main(string[] args)
         {
-            try
-            {
-                MainAsync(args).Wait();
-                return 0;
-            }
-            catch(Exception e)
-            {
-                throw;
-                return 1;
-            }
+            MainAsync(args).Wait(); 
+            return 0;
         }
 
         private static void _configureServices(IServiceCollection serviceCollection)

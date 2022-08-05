@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using IronSphere.Extensions;
 using IronSphere.Extensions.Reflection;
 
@@ -14,7 +16,7 @@ namespace Jaxofy.Tools.DtosToTypescript
 
     public interface IAnalyzedType
     {
-        Type WriteToPath(string exportDirectory);
+        Task WriteToPath(string exportDirectory);
     }
 
     public class TypeAnalyzer : ITypeAnalyzer, IAnalyzedType
@@ -40,7 +42,7 @@ namespace Jaxofy.Tools.DtosToTypescript
             return this;
         }
 
-        public Type WriteToPath(string exportDirectory)
+        public async Task WriteToPath(string exportDirectory)
         {
             string className = _type.GetShortReadableName();
 
@@ -48,21 +50,39 @@ namespace Jaxofy.Tools.DtosToTypescript
                     from property in _propertyInfos
                     let name = property.Name
                     let type = _getPropertyTypeString(property)
-                    select name + ": " + type + ";"
+                    select $"\t{name}: {type};"
                 )
                 .ToList();
             
             string generatedClass = $@"// {_type.GetFullReadableName()} as {className}
 
 export interface {className} {{
-
-{string.Join($"\t{Environment.NewLine}", generatedProperties)}
-
+{string.Join($"{Environment.NewLine}", generatedProperties)}
 }}
 ";
+            string fileName = _classNameToFileName(className);
+            await AsyncFile.WriteTextAsync(Path.Combine(exportDirectory, $"{fileName}.ts"), generatedClass);
+        }
 
-            Console.WriteLine(generatedClass);
-            return _type;
+        private static string _classNameToFileName(string className)
+        {
+            IList<char> characters = new List<char>();
+
+            for (int index = 0; index < className.Length; index++)
+            {
+                char c = className[index];
+
+                if (char.IsUpper(c))
+                {
+                    c = char.ToLower(c);
+                    if (index > 0)
+                        characters.Add('-');
+                }
+                
+                characters.Add(c);
+            }
+
+            return new(characters.ToArray());
         }
 
         private string _getPropertyTypeString(PropertyInfo propertyInfo)

@@ -12,7 +12,9 @@ namespace Jaxofy.Services.TrackService
     {
         Task<OperationResult<Track>> StreamCheckAndInfoAsync(Guid id);
         
+        [Obsolete("will be replaced soon by DetermineByteRangeFromHeaders()")]
         long DetermineByteStartFromHeaders(IHeaderDictionary requestHeaders);
+        [Obsolete("will be replaced soon by DetermineByteRangeFromHeaders()")]
         long DetermineByteEndFromHeaders(IHeaderDictionary requestHeaders, long fileSize);
 
         Task<OperationResult<TrackStreamInfo>> TrackStreamInfoAsync(Guid id, long determineByteStartFromHeaders,

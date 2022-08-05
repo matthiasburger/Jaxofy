@@ -32,7 +32,7 @@ namespace Jaxofy.Controllers
             return await StreamTrack(Guid.NewGuid()).ConfigureAwait(false);
         }
         
-        [HttpGet, Route("{trackGuid}")]
+        [HttpGet, Route("{trackGuid:guid}")]
         [AllowAnonymous]
         public async Task<IActionResult> StreamTrack(Guid trackGuid)
         {
@@ -45,11 +45,9 @@ namespace Jaxofy.Controllers
             OperationResult<Track> track = await _trackService.StreamCheckAndInfoAsync(id);
 
             long byteStart = _trackService.DetermineByteStartFromHeaders(Request.Headers);
+            long byteEnd = _trackService.DetermineByteEndFromHeaders(Request.Headers, track.Data.FileSize);
 
-            long fileSize = track.Data.FileSize;
-            long byteEnd = _trackService.DetermineByteEndFromHeaders(Request.Headers, fileSize);
-
-            (long start, long end) = _trackService.DetermineByteRangeFromHeaders(Request.Headers, fileSize);
+            (long start, long end) = _trackService.DetermineByteRangeFromHeaders(Request.Headers, track.Data.FileSize);
 
             if (start != byteStart)
                 throw new AssertionException($"start {start} <> byteStart {byteStart}");

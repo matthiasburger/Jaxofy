@@ -12,7 +12,7 @@ namespace Jaxofy.Data.Models.Base
         /// <summary>
         /// Entity ID and DB Primary Key.
         /// </summary>
-        [Key, Column(Order = 0)] 
+        [Key, Column(Order = 0), DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public long Id { get; set; }
     }
 }

@@ -63,5 +63,12 @@ namespace Jaxofy.Data
         {
             optionsBuilder.UseLoggerFactory(_loggerFactory);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<TrackArtist>().HasKey(x => new { x.TrackId, x.ArtistId });
+            
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

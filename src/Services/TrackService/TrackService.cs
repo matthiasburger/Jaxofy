@@ -39,9 +39,9 @@ namespace Jaxofy.Services.TrackService
             Track track = await _dbContext.Tracks.FirstOrDefaultAsync(x => x.SongGuid == id);
 
             if (track == null)
-                return new OperationResult<Track>(true, $"Track Not Found [{id}]");
+                return new (true, $"Track Not Found [{id}]");
 
-            return new OperationResult<Track>
+            return new ()
             {
                 Data = track,
                 IsSuccess = true

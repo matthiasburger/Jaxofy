@@ -1,9 +1,14 @@
 using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
+
 using Jaxofy.Data.Models.Base;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+
 using Newtonsoft.Json;
 
 namespace Jaxofy.Data.Models
@@ -40,14 +45,34 @@ namespace Jaxofy.Data.Models
         
         [Column("FileSize")]
         public long FileSize { get; set; }
-        
-        // TODO: remove and change to n-m-relation with ICollection<Artist>
-        [Column("ArtistName")]
-        [JsonProperty("artistName")]
-        public string ArtistName { get; set; }
 
         [NotMapped]
         [JsonProperty("url")]
         public string Url => Path.Combine("play", SongGuid.ToString());
+        
+        public ICollection<TrackArtist> TrackArtists { get; set; } = new List<TrackArtist>();
+    }
+
+    public class TrackArtist
+    {
+        public Artist Artist { get; set; }
+
+        public Track Track { get; set; }
+        
+        public Guid ArtistId { get; set; }
+
+        public long TrackId { get; set; }
+    }
+
+    public class Artist : IEntity<Guid>
+    {
+        [Key, Column(Order = 0), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+
+        public long ArtistId { get; set; }
+
+        public string Name { get; set; }
+
+        public ICollection<TrackArtist> TrackArtists { get; set; } = new List<TrackArtist>();
     }
 }

@@ -33,12 +33,8 @@ namespace Jaxofy.Extensions
         /// <returns>Decoded <c>byte[]</c></returns>
         public static byte[] ToBytesFromBase64(this string b64)
         {
-            while (b64.Length % 4 != 0)
-            {
-                b64 += '=';
-            }
-
-            return Convert.FromBase64String(b64);
+            string appendix = new ('=', 4 - b64.Length % 4);
+            return Convert.FromBase64String($"{b64}{appendix}");
         }
 
         public static string Capitalize(this string @this)
@@ -53,13 +49,7 @@ namespace Jaxofy.Extensions
         
         public static string ToContentDispositionFriendly(this string input)
         {
-            if (string.IsNullOrEmpty(input))
-            {
-                return null;
-            }
-
-            return input.Replace(',', ' ');
+            return string.IsNullOrEmpty(input) ? null : input.Replace(',', ' ');
         }
-
     }
 }

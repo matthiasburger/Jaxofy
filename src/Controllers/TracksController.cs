@@ -71,7 +71,7 @@ namespace Jaxofy.Controllers
             Track track = new()
             {
                 Title = tag?.Title ?? formFile.FileName,
-                ArtistName = @"keiner",
+                // ArtistName = @"keiner",
                 FileName = songGuid.ToString(),
                 SongGuid = songGuid,
                 CreatedDate = DateTime.Now,

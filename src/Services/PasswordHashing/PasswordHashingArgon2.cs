@@ -29,7 +29,7 @@ namespace Jaxofy.Services.PasswordHashing
             try
             {
                 byte[] salt = new byte[argon2Options.SaltLength];
-                using RNGCryptoServiceProvider rng = new();
+                using RandomNumberGenerator rng = RandomNumberGenerator.Create();
                 rng.GetBytes(salt);
 
                 using Argon2id argon2 = new(password.GetBytes(Encoding.UTF8))
