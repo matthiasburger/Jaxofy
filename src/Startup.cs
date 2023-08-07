@@ -82,6 +82,8 @@ namespace Jaxofy
                 .Count()
             );
 
+            services.AddSwaggerGen();
+
             services.Configure<IpRateLimitOptions>(_configuration.GetSection("IpRateLimiting"));
             services.Configure<IpRateLimitPolicies>(_configuration.GetSection("IpRateLimitPolicies"));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -168,6 +170,9 @@ namespace Jaxofy
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
             else
             {

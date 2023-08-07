@@ -31,7 +31,7 @@ namespace Jaxofy.Controllers
         }
 
         [HttpGet, Route("")]
-        public ActionResult Get(ODataQueryOptions<Track> query)
+        public ActionResult Search(ODataQueryOptions<Track> query)
         {
             IQueryable tracks = query.ApplyTo(_trackRepository.GetQueryable());
             return Ok(tracks);
