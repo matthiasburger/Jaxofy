@@ -59,9 +59,9 @@ namespace Jaxofy.Controllers
         }
 
         [HttpPost("seed"), AllowAnonymous]
-        public IActionResult Seed()
+        public async Task<IActionResult> Seed()
         {
-            _dataSeed.SeedData();
+            await _dataSeed.SeedData();
             return Ok();
         }
 

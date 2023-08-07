@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jaxofy.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220804105533_AddedArtistAssignmentForTrack")]
-    partial class AddedArtistAssignmentForTrack
+    [Migration("20220809090927_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -105,7 +105,75 @@ namespace Jaxofy.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Artist");
+                    b.ToTable("Artists");
+                });
+
+            modelBuilder.Entity("Jaxofy.Data.Models.SearchItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<Guid?>("ArtistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("SongCollectionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("TrackId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArtistId");
+
+                    b.HasIndex("SongCollectionId");
+
+                    b.HasIndex("TrackId");
+
+                    b.ToTable("SearchItems");
+                });
+
+            modelBuilder.Entity("Jaxofy.Data.Models.SongCollection", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SongCollections");
+                });
+
+            modelBuilder.Entity("Jaxofy.Data.Models.SongCollectionArtist", b =>
+                {
+                    b.Property<long>("SongCollectionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<Guid>("ArtistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("TrackId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("SongCollectionId", "ArtistId");
+
+                    b.HasIndex("ArtistId");
+
+                    b.HasIndex("TrackId");
+
+                    b.ToTable("SongCollectionArtists");
                 });
 
             modelBuilder.Entity("Jaxofy.Data.Models.Track", b =>
@@ -163,7 +231,51 @@ namespace Jaxofy.Migrations
 
                     b.HasIndex("ArtistId");
 
-                    b.ToTable("TrackArtist");
+                    b.ToTable("TrackArtists");
+                });
+
+            modelBuilder.Entity("Jaxofy.Data.Models.SearchItem", b =>
+                {
+                    b.HasOne("Jaxofy.Data.Models.Artist", "Artist")
+                        .WithMany()
+                        .HasForeignKey("ArtistId");
+
+                    b.HasOne("Jaxofy.Data.Models.SongCollection", "SongCollection")
+                        .WithMany()
+                        .HasForeignKey("SongCollectionId");
+
+                    b.HasOne("Jaxofy.Data.Models.Track", "Track")
+                        .WithMany()
+                        .HasForeignKey("TrackId");
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("SongCollection");
+
+                    b.Navigation("Track");
+                });
+
+            modelBuilder.Entity("Jaxofy.Data.Models.SongCollectionArtist", b =>
+                {
+                    b.HasOne("Jaxofy.Data.Models.Artist", "Artist")
+                        .WithMany()
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Jaxofy.Data.Models.SongCollection", "SongCollection")
+                        .WithMany("SongCollectionArtists")
+                        .HasForeignKey("SongCollectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Jaxofy.Data.Models.Track", null)
+                        .WithMany("SongCollectionArtists")
+                        .HasForeignKey("TrackId");
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("SongCollection");
                 });
 
             modelBuilder.Entity("Jaxofy.Data.Models.TrackArtist", b =>
@@ -190,8 +302,15 @@ namespace Jaxofy.Migrations
                     b.Navigation("TrackArtists");
                 });
 
+            modelBuilder.Entity("Jaxofy.Data.Models.SongCollection", b =>
+                {
+                    b.Navigation("SongCollectionArtists");
+                });
+
             modelBuilder.Entity("Jaxofy.Data.Models.Track", b =>
                 {
+                    b.Navigation("SongCollectionArtists");
+
                     b.Navigation("TrackArtists");
                 });
 #pragma warning restore 612, 618

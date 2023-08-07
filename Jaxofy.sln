@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasTeamRevolution.Tests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jaxofy.Tools.DtosToTypescript", "tools\Jaxofy.Tools.DtosToTypescript\Jaxofy.Tools.DtosToTypescript.csproj", "{5F8AB94C-5565-4B46-936D-CEA43B4F6753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatedConfiguration", "TemplatedConfiguration\TemplatedConfiguration.csproj", "{BDF664A7-ABCE-420F-AB73-6363A61F8200}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F8AB94C-5565-4B46-936D-CEA43B4F6753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF664A7-ABCE-420F-AB73-6363A61F8200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF664A7-ABCE-420F-AB73-6363A61F8200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF664A7-ABCE-420F-AB73-6363A61F8200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF664A7-ABCE-420F-AB73-6363A61F8200}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

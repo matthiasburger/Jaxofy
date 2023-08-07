@@ -1,7 +1,7 @@
 using System;
 using System.Security.Claims;
 using System.Security.Cryptography;
-
+using System.Threading.Tasks;
 using AspNetCoreRateLimit;
 using AutoMapper.Extensions.ExpressionMapping;
 
@@ -217,10 +217,11 @@ namespace Jaxofy
             {
                 try
                 {
-                    seeder.SeedData();
+                    Task.Run(seeder.SeedData);
                 }
-                catch
+                catch (Exception e)
                 {
+                    throw;
                     // Ignored. 
                 }
             }

@@ -51,8 +51,30 @@ namespace Jaxofy.Data.Models
         public string Url => Path.Combine("play", SongGuid.ToString());
         
         public ICollection<TrackArtist> TrackArtists { get; set; } = new List<TrackArtist>();
+        public ICollection<SongCollectionArtist> SongCollectionArtists { get; set; } = new List<SongCollectionArtist>();
+
     }
 
+    public class SongCollection : Entity
+    {
+        public string Title { get; set; }
+
+        public DateTime ReleaseDate { get; set; }
+
+        public ICollection<SongCollectionArtist> SongCollectionArtists { get; set; } = new List<SongCollectionArtist>();
+    }
+
+    public class SongCollectionArtist
+    {
+        public Artist Artist { get; set; }
+
+        public SongCollection SongCollection { get; set; }
+        
+        public Guid ArtistId { get; set; }
+
+        public long SongCollectionId { get; set; }
+    }
+    
     public class TrackArtist
     {
         public Artist Artist { get; set; }

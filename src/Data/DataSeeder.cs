@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Jaxofy.Data.Models;
 using Jaxofy.Services.PasswordHashing;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +9,7 @@ namespace Jaxofy.Data
 {
     public interface IDataSeeder
     {
-        void SeedData();
+        Task SeedData();
     }
 
     public class DataSeeder : IDataSeeder
@@ -22,20 +23,20 @@ namespace Jaxofy.Data
             _db = db;
         }
 
-        public void SeedData()
+        public async Task SeedData()
         {
             if (_db.ApplicationUsers.Any())
                return;
 
-            _db.ApplicationUsers.Add(new ApplicationUser
+            await _db.ApplicationUsers.AddAsync(new ()
             {
                 Email = "matthias@fam-burger.de",
-                Password = "matthias",
+                Password = await _passwordHashing.HashPassword("matthias"),
                 Username = "matthias",
                 IsAdmin = true
             });
 
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
     }
 }

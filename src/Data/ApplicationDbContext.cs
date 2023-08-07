@@ -46,6 +46,11 @@ namespace Jaxofy.Data
     {
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Track> Tracks { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<SongCollection> SongCollections { get; set; }
+        public DbSet<SearchItem> SearchItems { get; set; }
+        public DbSet<TrackArtist> TrackArtists { get; set; }
+        public DbSet<SongCollectionArtist> SongCollectionArtists { get; set; }
         
         private readonly ILoggerFactory _loggerFactory;
         private readonly IEnvironmentDiscovery _environmentDiscovery;
@@ -58,7 +63,7 @@ namespace Jaxofy.Data
             _environmentDiscovery = environmentDiscovery;
             _passwordHashing = passwordHashing;
         }
-
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLoggerFactory(_loggerFactory);
@@ -67,6 +72,7 @@ namespace Jaxofy.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TrackArtist>().HasKey(x => new { x.TrackId, x.ArtistId });
+            modelBuilder.Entity<SongCollectionArtist>().HasKey(x => new { x.SongCollectionId, x.ArtistId });
             
             base.OnModelCreating(modelBuilder);
         }

@@ -136,7 +136,7 @@ namespace Jaxofy.Services.TrackService
                 ContentDisposition =
                     $"attachment; filename=\"{_httpEncoder?.UrlEncode(track.FileName).ToContentDispositionFriendly()}\"",
                 ContentDuration = contentDurationTimeSpan.TotalSeconds.ToString(CultureInfo.InvariantCulture),
-                Track = new DataToken {Text = track.Title, Value = track.SongGuid.ToString()},
+                Track = new () {Text = track.Title, Value = track.SongGuid.ToString()},
                 BeginBytes = beginBytes,
                 EndBytes = endBytes,
                 ContentRange = $"bytes {beginBytes}-{endBytes}/{contentLength}",
