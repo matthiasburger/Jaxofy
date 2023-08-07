@@ -11,7 +11,6 @@ using Jaxofy.Data.Repositories;
 
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
 
@@ -31,9 +30,9 @@ namespace Jaxofy.Controllers
         }
 
         [HttpGet, Route("")]
-        public ActionResult Search(ODataQueryOptions<Track> query)
+        public ActionResult Search(string title)
         {
-            IQueryable tracks = query.ApplyTo(_trackRepository.GetQueryable());
+            IQueryable tracks = _trackRepository.GetQueryable();
             return Ok(tracks);
         }
 

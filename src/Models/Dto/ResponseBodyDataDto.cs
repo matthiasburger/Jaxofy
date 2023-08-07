@@ -13,10 +13,6 @@ namespace Jaxofy.Models.Dto
         /// </summary>
         public string Type { get; set; }
         
-        /// <summary>
-        /// The total amount of items potentially available to fetch.
-        /// </summary>
-        public long? Count { get; set; }
         
         /// <summary>
         /// This and <see cref="ResponseBodyDto.Errors"/> are mutually exclusive: if this is set, <see cref="ResponseBodyDto.Errors"/> should be <c>null</c> and vice-versa!<para> </para>

@@ -55,7 +55,6 @@ namespace Jaxofy.Controllers.Base
             {
                 Data = new ResponseBodyDataDto
                 {
-                    Count = totalItems,
                     Type = typeof(T).Name,
                     Items = items,
                 }
@@ -69,7 +68,6 @@ namespace Jaxofy.Controllers.Base
             {
                 Data = new ResponseBodyDataDto
                 {
-                    Count = totalItems,
                     Type = typeof(T).Name,
                     Items = items
                 }

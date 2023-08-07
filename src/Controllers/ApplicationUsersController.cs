@@ -13,7 +13,6 @@ using Jaxofy.Services.PasswordHashing;
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
@@ -35,17 +34,17 @@ namespace Jaxofy.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet, AllowAnonymous]
         [Route("")]
-        public IActionResult GetAll(ODataQueryOptions<ApplicationUser> query)
+        public IActionResult GetAll()
         {
             IQueryable<ApplicationUser> applicationUsersQueryable =
                 _applicationUserRepository.GetQueryable().AsNoTracking();
 
-            IQueryable applicationUsers = query.ApplyTo(applicationUsersQueryable);
+            // IQueryable applicationUsers = query.ApplyTo(applicationUsersQueryable);
 
             IEnumerable<ApplicationUserResponseDto> userResponse =
-                _mapper.Map<List<ApplicationUserResponseDto>>(applicationUsers);
+                _mapper.Map<List<ApplicationUserResponseDto>>(applicationUsersQueryable.ToList());
 
             return EnvelopeResult.Ok(userResponse);
         }

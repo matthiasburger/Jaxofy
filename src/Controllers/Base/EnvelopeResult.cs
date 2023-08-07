@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Jaxofy.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData.Abstracts;
-using Microsoft.AspNetCore.OData.Extensions;
 
 namespace Jaxofy.Controllers.Base
 {
@@ -54,7 +52,6 @@ namespace Jaxofy.Controllers.Base
                 ? itemsType.GetElementType()
                 : itemsType.GetGenericArguments()[0];
 
-            IODataFeature oDataFeature = _controllerBase.HttpContext.ODataFeature();
             
             return _controllerBase.Ok(new ResponseBodyDto
             {
@@ -62,7 +59,6 @@ namespace Jaxofy.Controllers.Base
                 {
                     Type =  itemType?.Name,
                     Items = items.Cast<object>(),
-                    Count = oDataFeature.TotalCount
                 }
             });
         }
@@ -95,8 +91,7 @@ namespace Jaxofy.Controllers.Base
                 Data = new ResponseBodyDataDto
                 {
                     Type = itemType?.Name,
-                    Items = enumerable.Cast<object>(),
-                    Count = enumerable.LongCount()
+                    Items = enumerable.Cast<object>()
                 }
             });
         }
@@ -129,8 +124,7 @@ namespace Jaxofy.Controllers.Base
                 Data = new ResponseBodyDataDto
                 {
                     Type = itemType?.Name,
-                    Items = enumerable.Cast<object>(),
-                    Count = enumerable.LongCount()
+                    Items = enumerable.Cast<object>()
                 }
             });
         }

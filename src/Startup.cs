@@ -22,7 +22,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.OData;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +29,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OData.Edm;
 
 using Serilog;
 
@@ -71,16 +69,6 @@ namespace Jaxofy
                         .AllowCredentials()
                 );
             });
-
-            IEdmModel v1 = EdmModelBuilder.GetEdmModel();
-
-            services.AddOData(opt => opt
-                .AddModel(v1)
-                .Select()
-                .OrderBy()
-                .Filter()
-                .Count()
-            );
 
             services.AddSwaggerGen();
 
